@@ -1,0 +1,43 @@
+{% extends 'base3.html.twig' %}
+{% block title %}Match{% endblock %}
+
+{% block main %}
+
+    <div class="main-content" >
+        <section class="section">
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                            </div>
+                            <div class="card-body">
+
+
+                                <div class="section-title mt-0">Nom Tournoi</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ tournoi.nomTournoi }}">
+                                </div>
+
+                                <div class="section-title mt-0">Type</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ tournoi.type }}">
+                                </div>
+
+                                <a href="{{ path('tournoi_index') }}"class="badge badge-info">Retour à la liste</a>
+
+                                <a href="{{ path('tournoi_edit', {'idTournoi': tournoi.idTournoi}) }}"class="badge badge-warning">Modifier</a>
+                            </div>
+                            {{ include('tournoi/_delete_form.html.twig') }}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+
+{% extends 'base3.html.twig' %}
+
+{% block title %}Ajouter Tournoi{% endblock %}
+
+{% block main %}
+
+    <div class="main-content">
+        <section class="section">
+            <div class="section-body">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Ajouter un nouveau tournoi</h4>
+                        </div>
+                        <div class="card-body">
+
+                            {{ include('tournoi/_form.html.twig') }}
+                        </div>
+                        <a href="{{ path('tournoi_index') }}">Retour à la liste</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}Produit{% endblock %}
+
+{% block main %}
+
+    <div class="main-content" >
+        <section class="section">
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Produit</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="section-title mt-0">Id</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ produit.idProduit }}">
+                                </div>
+                                <div class="section-title mt-0">nom_produit</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ produit.nomProduit}}">
+                                </div>
+                                <div class="section-title mt-0">prix</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ produit.prix}}">
+                                </div>
+                                <div class="section-title mt-0">qunatite_total</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ produit.quantiteTotal}}">
+                                </div>
+                                <div class="section-title mt-0">quantite_restant</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ produit.quantiteRestant}}">
+                                </div>
+                                <div class="section-title mt-0">description</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ produit.description}}">
+                                </div>
+                                <div class="section-title mt-0">Image</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ produit.path }}">
+                                </div>
+
+
+                                <a href="{{ path('produit_index') }}"class="badge badge-info">retour</a>
+
+                                <a href="{{ path('produit_edit', {'idProduit':produit.idProduit }) }}"class="badge badge-warning">Editer</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+{% endblock %}

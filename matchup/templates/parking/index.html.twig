@@ -1,0 +1,176 @@
+
+{% extends 'base3.html.twig' %}
+
+{% block title %}Parking{% endblock %}
+
+     {% block main %}
+
+         <div class="main-content">
+             <section class="section">
+
+
+
+                 <div class="row">
+                     <div class="col-12">
+                         <div class="card">
+                             <div class="card-header">
+                                 <h4>Liste des Parkings</h4>
+                                 <div class="card-header-form">
+                                     <form>
+                                         <div class="input-group">
+                                             <input type="text" id="search" class="form-control" placeholder="Search">
+                                             <div class="input-group-btn">
+                                                 <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+
+
+
+
+                                                 <a href="{{ path('parking_new') }}"class="badge badge-success">Ajouter</a>
+
+
+                                             </div>
+                                         </div>
+                                     </form>
+                                 </div>
+                             </div>
+                             <div class="card-body p-0">
+                                 <div class="table-responsive">
+                                     <script src="{{ asset('jquery.min.js') }}"></script>
+                                     <table id="tableac" class="table">
+                                         <tr>
+                                             <th>IdParking</th>
+                                             <th>Adresse</th>
+                                             <th>Nbdeplace</th>
+                                             <th>actions</th>
+                                         </tr>
+                                         <tbody>
+
+
+                                         <tr>
+
+                                             {% for parking in parkings %}
+                                         <tr>
+                                             <td>{{ parking.idParking }}</td>
+                                             <td>{{ parking.adresse }}</td>
+                                             <td>{{ parking.nbdeplace }}</td>
+                                             <td>
+                                                 <a href="{{ path('parking_show', {'idParking': parking.idParking}) }}">Afficher</a>
+                                                 <a href="{{ path('parking_edit', {'idParking': parking.idParking}) }}">Modifier</a>
+                                                 <a href="{{ path('parking_listp', {'idParking': parking.idParking}) }}">Imprimer</a>
+
+                                             </td>
+                                         </tr>
+                                         {% else %}
+                                             <tr>
+                                                 <td colspan="11">no records found</td>
+                                             </tr>
+                                         {% endfor %}
+                                         <script>
+                                             $(document).ready(function(){
+                                                 $('#search').keyup(function(){
+                                                     search_table($(this).val());
+                                                 });
+                                                 function search_table(value){
+                                                     $('#tableac tbody tr').each(function(){
+                                                         var found = 'false';
+                                                         $(this).each(function(){
+                                                             if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                                             {
+                                                                 found = 'true';
+                                                             }
+                                                         });
+
+                                                         if(found == 'true')
+                                                         {
+                                                             $(this).show();
+
+                                                         }
+                                                         else
+                                                         {
+                                                             $(this).hide();
+
+                                                         }
+                                                     });
+                                                 }
+                                             });
+                                         </script>
+
+                                         </tbody>
+
+                                         {{ knp_pagination_render(parkings) }}
+
+                                     </table>
+
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+
+                 </div>
+
+                 <!-- Support tickets -->
+
+
+             </section>
+             <div class="pb-0 mr-0">
+                 <a  role="button" class="btn btn-primary" href="http://localhost/matchup/public/index.php/contact">
+                     Contact us
+                 </a>
+             </div>
+         </div>
+
+
+         <!DOCTYPE html>
+         <html lang="fr">
+         <head>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>ChartJS</title>
+
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous">
+         </head>
+         <body>
+         <canvas id="monGraph" width="400" height="100"></canvas>
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+
+         <script>
+             let ctx = document.querySelector("#monGraph")
+             let graph = new Chart(ctx, {
+                 type: "pie",
+                 data: {
+                     labels: ['Nombre de place', 'Adresse'],
+                     datasets: [{
+                         label: 'Nombre de votes',
+                         data: [12, 19],
+                         backgroundColor: ['red', 'blue']
+                     }]
+                     // {
+                     //     label: 'Nombre de "J\'aime"',
+                     //     data: [14, 2, 5, 8, 7, 22],
+                     //     backgroundColor: ['red', 'lightblue', 'lightyellow', 'lightgreen', 'pink', 'gold']
+                     // }]
+                 },
+                 options: {
+                     title: {
+                         display: true,
+                         text: 'Chart de Parking'
+                     },
+                     legend: {
+                         position: 'bottom'
+                     }
+                     // scales: {
+                     //     yAxes: [{
+                     //         ticks: {
+                     //             beginAtZero: true
+                     //         }
+                     //     }]
+                     // }
+                 }
+             })
+         </script>
+         </body>
+         </html>
+
+
+     {% endblock %}

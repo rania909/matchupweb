@@ -1,0 +1,42 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}Categorie{% endblock %}
+
+{% block main %}
+
+    <div class="main-content" >
+        <section class="section">
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Categorie</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="section-title mt-0">Id</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ categorie.idCategorie }}">
+                                </div>
+                                <div class="section-title mt-0"> categorie.nomCategorie</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{  categorie.nomCategorie}}">
+                                </div>
+
+
+                                <a href="{{ path('categorie_index') }}"class="badge badge-info">retour</a>
+
+                                <a href="{{ path('categorie_edit', {'idCategorie': categorie.idCategorie}) }}"class="badge badge-warning">Editer</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+{% endblock %}

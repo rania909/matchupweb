@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Resterrain index{% endblock %}
+
+{% block body %}
+    <h1>Resterrain index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdRester</th>
+                <th>DateRes</th>
+                <th>NomTerrain</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for resterrain in resterrains %}
+            <tr>
+                <td>{{ resterrain.idRester }}</td>
+                <td>{{ resterrain.dateRes }}</td>
+                <td>{{ resterrain.nomTerrain }}</td>
+                <td>
+                    <a href="{{ path('resterrain_show', {'idRester': resterrain.idRester}) }}">show</a>
+                    <a href="{{ path('resterrain_edit', {'idRester': resterrain.idRester}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('resterrain_new') }}">Create new</a>
+{% endblock %}

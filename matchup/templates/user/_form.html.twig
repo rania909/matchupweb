@@ -1,0 +1,96 @@
+{#  {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }} #}
+{{form_start(form) }}
+
+
+
+
+
+<div  >
+
+    <div class="form-group">
+        {{ form_label(form.nom, "nom") }}
+
+    </div>
+
+    <div class="form-group">
+        <input {{ form_widget(form.nom, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6 '}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.prenom, "prenom") }}
+
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.prenom, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.email, "email") }}
+
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.email, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.mdp, "mdp") }}
+
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.mdp, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.adresse, "adresse") }}
+
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.adresse, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.age, "age") }}
+
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.age, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.genre, "genre") }}
+
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.genre, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+    </div>
+    <div>
+        <div class="form-group">
+            {{ form_label(form.nbTerrain, "nb_terrain") }}
+
+        </div>
+        <div class="form-group">
+            {{ form_widget(form.nbTerrain, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+        </div>
+        <div>
+            <div>
+                <div class="form-group">
+                    {{ form_label(form.roles, "roles") }}
+
+                </div>
+                <div class="form-group">
+                    {{ form_widget(form.roles, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+                </div>
+                <div>
+        <button class="btn btn-success">{{ button_label|default('Ajouter') }}</button>
+    </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+
+
+
+
+{{ form_end(form) }}

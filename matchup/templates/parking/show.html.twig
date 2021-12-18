@@ -1,0 +1,49 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}Parking{% endblock %}
+
+{% block main %}
+    <div class="main-content" >
+        <section class="section">
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Parking</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="section-title mt-0">IdParking</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ parking.idParking }}">
+                                </div>
+                                <div class="section-title mt-0">Adresse</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ parking.adresse }}">
+                                </div>
+                                <div class="section-title mt-0">Nbdeplace</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ parking.nbdeplace  }}">
+                                </div>
+
+
+
+                                <a href="{{ path('parking_index') }}"class="badge badge-info">Retour</a>
+
+                                <a href="{{ path('parking_edit', {'idParking': parking.idParking}) }}"class="badge badge-warning">Modifier</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+{% endblock %}
+
+

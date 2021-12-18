@@ -1,0 +1,80 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block main %}
+
+<div class="main-content" >
+    <section class="section">
+        <div class="section-body">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+    <div class="card">
+        <div class="card-header">
+            <h4>User</h4>
+        </div>
+        <div class="card-body">
+            <div class="section-title mt-0">Id</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.id }}">
+            </div>
+            <div class="section-title mt-0">Nom</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.nom }}">
+            </div>
+            <div class="section-title mt-0">Prenom</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.prenom }}">
+            </div>
+            <div class="section-title mt-0">Email</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.email }}">
+            </div>
+            <div class="section-title mt-0">Mdp</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.mdp }}">
+            </div>
+            <div class="section-title mt-0">Adresse</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.adresse }}">
+            </div>
+            <div class="section-title mt-0">Age</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.age }}">
+            </div>
+            <div class="section-title mt-0">Genre</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.genre }}">
+            </div>
+            <div class="section-title mt-0">NbTerrain</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.nbTerrain }}">
+            </div>
+            <div class="section-title mt-0">Role</div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" value="{{ user.role }}">
+            </div>
+            <a href="{{ path('user_index') }}"class="badge badge-info">retour</a>
+
+            <a href="{{ path('user_edit', {'id': user.id}) }}"class="badge badge-warning">Editer</a>
+        </div>
+
+    </div>
+        </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+{% endblock %}

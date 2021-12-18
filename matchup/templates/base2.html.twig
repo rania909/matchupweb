@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Up </title>
+    <!-- Favicon -->
+    {% block css %}
+    <link rel="shortcut icon" href="{{asset("images/matchup.png")}}" type="image/x-icon">
+    <link rel="icon" href="{{asset("images/matchup.png")}}" type="image/x-icon">
+    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="{{asset("css/bootstrap.min.css")}}">
+    <!--slick css-->
+    <link rel="stylesheet" href="{{asset("css/slick.css")}}">
+    <!--slick-theme css-->
+    <link rel="stylesheet" href="{{asset("css/slick-theme.css")}}">
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="{{asset("css/style.css")}}">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="{{asset("css/responsive.css")}}">
+    <!-- color css -->
+    <link rel="stylesheet" id="ui-theme-color" href="{{asset("css/color3.css")}}">
+        <link rel="stylesheet" href="{{asset("assets/css/app.min.css")}}">
+    {% endblock %}
+</head>
+{% block body %}
+<body>
+
+<div class="loader_wrapper">
+    <div class="loader">
+        <div class="loader-5 center"><span></span></div>
+    </div>
+</div>
+<!--// loader_wrapper -->
+<div id="wrapper">
+
+    <header id="header">
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-unstyled align-left menu-head">
+                            <li><i class="flaticon-old-handphone"></i>(+216) 94 892 741 </li>
+                            <li><i class="flaticon-black-back-closed-envelope-shape"></i>Service à la clientèle 24h/24 et 7 j/7</li>
+                        </ul>
+                        <div class="menu-1">
+                            <i class="flaticon-menu-1"></i>
+                        </div>
+                        <ul class="list-unstyled align-right home list-navigation">
+                            <a href="{{asset("home")}}">Accueil</a>
+
+
+                            <li class="drop drop_list"><a href="{{ path('app_logout') }}">Logout</a>
+
+                            </li>
+                            {#<li><a href="{{path("blog_categories.html")}}">BLOG</a></li>
+                                <li><a href="{{path("contact_us.html")}}">CONTACT US</a></li>
+                                <li><a href="{{path("login.html")}}">LOGIN</a></li>#}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-nav">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-lg-12">
+                        <div class="main-top-nav">
+                            <div class="logo" style="width: 30%">
+
+                                <img src="{{asset("images/matchup1.png")}}" alt="" class="img-fluid"style="margin: 0px auto 0px;  display: block;width: 15%;">
+                                </a>
+                            </div>
+                            <!-- end-->
+                            <div class="list-nav-menu">
+
+                                <i class="flaticon-menu-1"></i>
+                            </div>
+                            <div class="list-nav">
+                                <ul class="list-unstyled">
+                                    <a href="{{ path('profileuser') }}">Profil</a>
+                                    <a href="{{ path('list_match') }}">Match</a>
+
+                                    <a href="{{ path('fronte_parking') }}">Parking</a>
+                                    <!--<a href="{{ path('front_reservation') }}">Reservation</a> -->
+                                    <a href="{{ path('list_tournoi') }}">Tournoi</a>
+                                    <li class="drop"><a href="{{ path('front') }}">Produits</a>
+
+                                    </li>
+                                    <div class="cart-nav">
+                                        <ul>
+
+                                            <li><a href="{{ path('cart_index') }}"><i class="flaticon-shopping-bag" style="width: 50%"></i></a>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="product-info">
+        <div class="overlay"></div>
+        <div class="fixed-bg" style="background: url('{{asset("images/header.jpg")}}');"></div>
+        <div class="container">
+            <div class="product-menu">
+
+            </div>
+        </div>
+    </section>
+    <!--header end-->
+    {% block section1 %}
+
+    {% endblock %}
+
+
+
+    <!--product-info-->
+
+    <!--egesmouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu-->
+    {% block footer %}
+
+
+
+        <footer class="main-footer new-block pd-tp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer-head">
+                            <img src="{{asset("images/matchup.png")}}" alt="" class="img-fluid">
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+
+                                <div class="footer-content">
+                                    <div class="footer-head">
+                                        <h3>Contact</h3>
+                                    </div>
+                                    <ul class="info-block">
+                                        <li><i class="flaticon-home-button"></i>
+                                            <p>1, 2 rue André Ampère - 2083 - Pôle Technologique - El Ghazala.</p>
+                                        </li>
+                                        <li><i class="flaticon-telephone-handle-silhouette"></i>
+                                            <p>+216 28 000 536</p>
+                                        </li>
+                                        <li><i class="flaticon-envelope"></i>
+                                            <p>matchup.pi@gmail.com</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-unstyled card-block card-info-block">
+                                        <li>
+                                            <a href="#"><img src="{{asset("images/logo11.jpg")}}" alt="" class="img-fluid"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="{{asset("images/logo1.jpg")}}" alt="" class="img-fluid"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="{{asset("images/logo3.jpg")}}" alt="" class="img-fluid"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="{{asset("images/logo4.jpg")}}" alt="" class="img-fluid"></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><img src="{{asset("images/logo5.jpg")}}" alt="" class="img-fluid"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                        <div class="f-links">
+                            <div class="footer-head">
+                                <h3>support</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Shipping Policy</a></li>
+                                    <li><a href="#">Return Policy</a></li>
+                                    <li><a href="#">Our Partner</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Shipping Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                        <div class="f-links">
+                            <div class="footer-head">
+                                <h3>our services</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Sports 365</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Management Team</a></li>
+                                    <li><a href="#">Media</a></li>
+                                    <li><a href="#">Work with Us</a></li>
+                                    <li><a href="#">Sell Through Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+                        <div class="flickr">
+                            <div class="footer-head">
+                                <h3>instagram</h3>
+                            </div>
+                            <div class="footer-content footer-effect">
+                                <ul class="list-unstyled"> {{asset("images/layer-54.jpg")}}
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-54.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-55.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-56.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-57.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-58.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-59.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-60.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-61.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-62.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--footer-->
+
+        <div class="copy-right">
+            <div class="container">
+                <p><a href="#">Copyright 2021 MatchUp All right Reserved</a></p>
+                <ul class="social-nav">
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                    <li><a href= "https://www.facebook.com/Match-Up-10226806198328"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <span id="go_to_top" class="go-to-top ">
+            <i class="flaticon-upload"></i>
+        </span>
+
+        <!-- go_to_top -->
+
+        <!-- #wrapper -->
+
+        <!-- include jQuery -->
+        <script src="{{asset("js/jquery.min.js")}}"></script>
+        <!-- bootstrap -->
+        <script src="{{asset("js/bootstrap.min.js")}}"></script>
+        <!-- easing -->
+        <script src="{{asset("js/jquery.easing.min.js")}}"></script>
+        <!-- bootstrap -->
+        <script src="{{asset("js/owl.carousel.min.js")}}"></script>
+        <!--isotop-->
+        <script src="{{asset("js/isotope.pkgd.min.js")}}"></script>
+        <!--mixit up-->
+        <script src="{{asset("js/jquery.mixitup.js")}}"></script>
+        <!--nice select-->
+        <script src="{{asset("js/jquery.nice-select.js")}}"></script>
+        <!-- slick -->
+        <script src="{{asset("js/slick.min.js")}}"></script>
+        <!--parallax-->
+        <script src="{{asset("js/parallax.min.js")}}"></script>
+        <!-- jarallax -->
+        <script src="{{asset("js/ofi.min.js")}}"></script>
+        <script src="{{asset("js/jarallax.js")}}"></script>
+        <!-- Event -->
+        <script src="{{asset("js/Event.js")}}"></script>
+        <!-- Magnifier -->
+        <script src="{{asset("js/Magnifier.js")}}"></script>
+        <!--google map-->
+        {# <script src="{{path("https://maps.googleapis.com/maps/api/js?key=AIzaSyBP1lPhUhDU6MINpruPDinAzXffRlpzzFo")}}"></script> #}
+        <!-- custom js -->
+        <script src="{{asset("js/custom.js")}}"></script>
+
+
+    {% endblock %}
+
+</div>
+</body>
+{% endblock %}
+
+
+<!-- Mirrored from rewebsotech.com/templates/sport_bazaar/web/blog_single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Apr 2021 16:43:35 GMT -->
+</html>

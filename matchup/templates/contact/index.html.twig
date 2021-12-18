@@ -1,0 +1,62 @@
+{% extends 'base3.html.twig' %}
+{% block title %}Mailing{% endblock %}
+
+{% block main %}
+
+
+    <div class="main-content">
+        <section class="section">
+
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Envoyer un email</h4>
+                            <div class="card-header-form">
+
+
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <script src="{{ asset('jquery.min.js') }}"></script>
+                                <table id="tableac" class="table">
+
+                                    </thead>
+                                    <tbody>
+
+                                    {% for message in app.flashes('message') %}
+                                        <div class="alert alert-success" role="alert">
+
+                                            {{ message }}
+                                        </div>
+                                    {% endfor %}
+
+                                        <tr>
+                                            <td colspan="11" ><th>Merci de Nous Contacter</th></td>
+
+                                            {{ form(ContactForm)}}
+                                        </tr>
+
+
+
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+{% endblock %}

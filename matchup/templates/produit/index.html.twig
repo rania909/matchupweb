@@ -1,0 +1,128 @@
+{% extends 'base3.html.twig' %}
+{% block title %}Listes des Produits {% endblock %}
+ {% block main %}
+
+     <div class="main-content">
+         <section class="section">
+
+             <div class="row">
+                 <div class="col-12">
+                     <div class="card">
+                         <div class="card-header">
+                             <h4>Produits </h4>
+                             <div class="card-header-form">
+                                 <form>
+                                     <div class="input-group">
+                                         <input type="text" id="search" class="form-control" placeholder="Search">
+                                         <div class="input-group-btn">
+                                             <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                                             <a href="{{ path('produit_new') }}"class="badge badge-success">Ajouter</a>
+                                             <a class="btn btn-outline-secondary" href="{{path('triproduit')}}">Tri par nom</a>
+                                             <a class="btn btn-icon icon-left btn-light" data-pack="android" href="{{path('imprimeproduit')}}"> PDF </a>
+                                         </div>
+                                     </div>
+                                 </form>
+                             </div>
+                         </div>
+                         <div class="card-body p-0">
+                             <div class="table-responsive">
+                                 <script src="{{ asset('jquery.min.js') }}"></script>
+
+                                 <table id="tableac" class="table">
+                                     <tr>
+                                         <th>Id Produit</th>
+                                         <th>Nom Produit</th>
+                                         <th>Prix</th>
+                                         <th>Quantité Total</th>
+                                         <th>Quantité  Restant</th>
+                                         <th>Description</th>
+                                         <th>Image</th>
+                                         <th>Actions</th>
+                                     </tr>
+                                     <tr>
+                                         <tbody>
+                                         {% for produit in produits %}
+                                     <tr>
+                                         <td>{{ produit.idProduit }}</td>
+                                         <td>{{ produit.nomProduit }}</td>
+                                         <td>{{ produit.prix }}</td>
+                                         <td>{{ produit.quantiteTotal }}</td>
+                                         <td>{{ produit.quantiteRestant }}</td>
+                                         <td>{{ produit.description }}</td>
+                                         <td> <img src="/images/products/{{ produit.path }}" alt="" class="img-fluid" width="120px"></td>
+                                         <td>
+                                             <a href="{{ path('produit_show', {'idProduit': produit.idProduit}) }}" class="badge badge-info">Afficher</a>
+                                             <a href="{{ path('produit_edit', {'idProduit': produit.idProduit}) }}" class="badge badge-warning">Modifier</a>
+                                         </td>
+                                     </tr>
+                                     {% else %}
+                                         <tr>
+                                             <td colspan="8">no records found</td>
+                                         </tr>
+                                     {% endfor %}
+                                         <script>
+                                             $(document).ready(function(){
+                                                 $('#search').keyup(function(){
+                                                     search_table($(this).val());
+                                                 });
+                                                 function search_table(value){
+                                                     $('#tableac tbody tr').each(function(){
+                                                         var found = 'false';
+                                                         $(this).each(function(){
+                                                             if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                                             {
+                                                                 found = 'true';
+                                                             }
+                                                         });
+                                                         if(found == 'true')
+                                                         {
+                                                             $(this).show();
+
+                                                         }
+                                                         else
+                                                         {
+                                                             $(this).hide();
+
+                                                         }
+                                                     });
+                                                 }
+                                             });
+                                         </script>
+                                         </tbody>
+
+                                     {#    <td>
+                                        <div class="badge badge-info">Average</div>
+                                         </td>
+                                         <td><a href="#" class="badge badge-success">Detail</a></td>
+                                         <td>
+                                             <div class="badge badge-danger">High</div>
+                                         </td>
+                                     </tr>
+                                     #}
+
+                                 </table>
+
+                             </div>
+                         </div>
+                     </div>
+                     <div class="card-body">
+
+                         <a class="btn btn-primary" href="{{path('statpro')}}"> Statistiques </a>
+
+
+
+                     </div>
+                     <div>
+                         <a class="navigation">{{ knp_pagination_render(produits) }}</a>
+                     </div>
+                 </div>
+             </div>
+         </section>
+     </div>
+ {% endblock %}
+
+
+
+
+
+

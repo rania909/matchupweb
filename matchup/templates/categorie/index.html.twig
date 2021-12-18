@@ -1,0 +1,110 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}Categorie index{% endblock %}
+
+ {% block main %}
+
+     <div class="main-content">
+         <section class="section">
+             <div class="row">
+                 <div class="col-12">
+                     <div class="card">
+                         <div class="card-header">
+                             <h4>Catégories</h4>
+                             <div class="card-header-form">
+                                 <form>
+                                     <div class="input-group">
+                                         <input type="text" id="search" class="form-control" placeholder="Search">
+                                         <div class="input-group-btn">
+                                             <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                                             <a href="{{ path('categorie_new') }}"class="badge badge-success">Ajouter</a>
+                                         </div>
+                                     </div>
+                                 </form>
+                             </div>
+                         </div>
+                         <div class="card-body p-0">
+                             <div class="table-responsive">
+                                 <script src="{{ asset('jquery.min.js') }}"></script>
+                                 <table d="tableac" class="table">
+                                     <tr>
+                                         <th>IdCategorie</th>
+                                         <th>NomCategorie</th>
+                                         <th>actions</th>
+                                     </tr>
+                                     <tr>
+                                         <tbody>
+                                         {% for categorie in categories %}
+                                     <tr>
+                                         <td>{{ categorie.idCategorie }}</td>
+                                         <td>{{ categorie.nomCategorie }}</td>
+                                         <td>
+                                             <a href="{{ path('categorie_show', {'idCategorie': categorie.idCategorie}) }}" class="badge badge-info">Afficher</a>
+                                             <a href="{{ path('categorie_edit', {'idCategorie': categorie.idCategorie}) }}" class="badge badge-warning">Modifier</a>
+                                         </td>
+                                     </tr>
+                                           {% else %}
+                                              <tr>
+                                                <td colspan="8">no records found</td>
+                                               </tr>
+                                            {% endfor %}
+                                         <script>
+                                             $(document).ready(function(){
+                                                 $('#search').keyup(function(){
+                                                     search_table($(this).val());
+                                                 });
+                                                 function search_table(value){
+                                                     $('#tableac tbody tr').each(function(){
+                                                         var found = 'false';
+                                                         $(this).each(function(){
+                                                             if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                                             {
+                                                                 found = 'true';
+                                                             }
+                                                         });
+                                                         if(found == 'true')
+                                                         {
+                                                             $(this).show();
+
+                                                         }
+                                                         else
+                                                         {
+                                                             $(this).hide();
+
+                                                         }
+                                                     });
+                                                 }
+                                             });
+                                         </script>
+                                         </tbody>
+                                         </tbody>
+                                     </tr>
+                                     {#    <td>
+                                        <div class="badge badge-info">Average</div>
+                                         </td>
+                                         <td><a href="#" class="badge badge-success">Detail</a></td>
+                                         <td>
+                                             <div class="badge badge-danger">High</div>
+                                         </td>
+                                     </tr>
+                                     #}
+
+                                 </table>
+
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+             </div>
+
+             <!-- Support tickets -->
+
+
+         </section>
+
+     </div>
+
+
+
+ {% endblock %}

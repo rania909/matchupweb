@@ -1,0 +1,74 @@
+
+
+
+
+
+{% block main %}
+
+
+    <hr>
+    <h1 align="center"  width="100%" style="color: #4EC6E8">User</h1>
+    </hr>
+    <hr>
+    <h1></h1>
+    </hr>
+
+
+
+<div class="card-body">
+    <div class="section-title mt-0">Id</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.id }}">
+    </div>
+    <div class="section-title mt-0">Nom</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.nom }}">
+    </div>
+    <div class="section-title mt-0">Prenom</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.prenom }}">
+    </div>
+    <div class="section-title mt-0">Email</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.email }}">
+    </div>
+    <div class="section-title mt-0">Mdp</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.mdp }}">
+    </div>
+    <div class="section-title mt-0">Adresse</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.adresse }}">
+    </div>
+    <div class="section-title mt-0">Age</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.age }}">
+    </div>
+    <div class="section-title mt-0">Genre</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.genre }}">
+    </div>
+    <div class="section-title mt-0">NbTerrain</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.nbTerrain }}">
+    </div>
+    <div class="section-title mt-0">Role</div>
+    <div class="form-group">
+
+        <input type="text" class="form-control" value="{{ user.role }}">
+    </div>
+
+
+
+
+{% endblock %}
+

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Resterrain{% endblock %}
+
+{% block body %}
+    <h1>Create new Resterrain</h1>
+
+    {{ include('resterrain/_form.html.twig') }}
+
+    <a href="{{ path('resterrain_index') }}">back to list</a>
+{% endblock %}

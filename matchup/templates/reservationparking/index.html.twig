@@ -1,0 +1,122 @@
+
+{% extends 'base3.html.twig' %}
+
+{% block title %}Reservation Parking {% endblock %}
+     {% block main %}
+         <div class="main-content">
+             <section class="section">
+
+
+
+                 <div class="row">
+                     <div class="col-12">
+                         <div class="card">
+                             <div class="card-header">
+                                 <h4>Liste des Reservations</h4>
+                                 <div class="card-header-form">
+                                     <form>
+                                         <div class="input-group">
+                                             <table>
+                                                 <div class="input-group-btn">
+                                                     <tr>
+                                                         <td><input type="text" id="search" class="form-control" placeholder="Rechercher"></td>
+                                                         <td><i class="fas fa-search"></i></td>
+                                                 <a href="{{ path('reservationparking_new') }}"class="badge badge-success">Ajouter</a>
+                                                     </tr>
+                                             </div>
+                                             </table>
+                                         </div>
+                                     </form>
+                                 </div>
+                             </div>
+                             <div class="card-body p-0">
+                                 <div class="table-responsive">
+                                     <script src="{{ asset('jquery.min.js') }}"></script>
+                                     <table id="tableac" class="table">
+                                         <tr>
+                                             <th>Idrsvparking</th>
+                                             <th>DateD</th>
+                                             <th>DateF</th>
+                                             <th>Email</th>
+                                             <th>actions</th>
+                                         </tr>
+                                         </thead>
+                                         <tbody>
+
+
+                                             {% for reservationparking in reservationparkings %}
+                                         <tr>
+                                             <td>{{ reservationparking.idrsvparking }}</td>
+                                             <td>{{  reservationparking.dateD  |date('d-m-Y')  }}</td>
+                                             <td>{{ reservationparking.dateF  |date('d-m-Y')  }}</td>
+                                             <td>{{ reservationparking.email }}</td>
+
+                                             <td>
+
+                                                 <a href="{{ path('reservationparking_show', {'idrsvparking': reservationparking.idrsvparking}) }}">Afficher</a>
+                                                 <a href="{{ path('reservationparking_edit', {'idrsvparking': reservationparking.idrsvparking}) }}">Modifier</a>
+                                             </td>
+                                         </tr>
+                                         {% else %}
+                                             <tr>
+
+                                                 <td colspan="11">Aucun enregistrement trouvé</td>
+                                             </tr>
+                                         {% endfor %}
+
+                                             <script>
+                                                 $(document).ready(function(){
+                                                     $('#search').keyup(function(){
+                                                         search_table($(this).val());
+                                                     });
+                                                     function search_table(value){
+                                                         $('#tableac tbody tr').each(function(){
+                                                             var found = 'false';
+                                                             $(this).each(function(){
+                                                                 if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                                                 {
+                                                                     found = 'true';
+                                                                 }
+                                                             });
+
+                                                             if(found == 'true')
+                                                             {
+                                                                 $(this).show();
+
+                                                             }
+                                                             else
+                                                             {
+                                                                 $(this).hide();
+
+                                                             }
+                                                         });
+                                                     }
+                                                 });
+                                             </script>
+
+                                         </tbody>
+                                        {{ knp_pagination_render(reservationparkings) }}
+                                     </table>
+
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+
+                 </div>
+
+                 <!-- Support tickets -->
+
+
+             </section>
+
+         </div>
+         <script>
+
+         </script>
+     {% endblock %}
+
+
+
+
+

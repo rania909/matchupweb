@@ -1,0 +1,31 @@
+{{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+
+<div>
+
+    <div class="form-group">
+        {{ form_label(form.type, "Type") }}
+
+    </div>
+
+    <div class="form-group">
+        {{ form_widget(form.type, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6 '}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.nomTournoi, "Nom Tournoi") }}
+
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.nomTournoi, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+    </div>
+    <div>
+        <button class="btn btn-success">{{ button_label|default('Ajouter') }}</button>
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+{{ form_end(form) }}

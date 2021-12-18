@@ -1,0 +1,1808 @@
+/*--------------------------------------------------------------
+    laptop, desktop
+---------------------------------------------------------------*/
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+    .video-ply-btn {
+        padding-top: 30%;
+        padding-left: 130px;
+    }
+    .core-features {
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1279px) {
+    .home-img {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #home-area {
+        padding: 200px 0 0;
+    }
+    #home-area.bg {
+        padding-bottom: 280px;
+    }
+    .ripple-effect {
+        padding: 200px 0 280px
+    }
+    h1 {
+        font-size: 55px;
+        line-height: 65px;
+    }
+    h2 {
+        font-size: 44px;
+        line-height: 54px;
+    }
+    h3 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    h4 {
+        font-size: 20px;
+        line-height: 30px
+    }
+    h5 {
+        font-size: 18px;
+        line-height: 28px
+    }
+    .caption-btn a {
+        padding: 10px 30px;
+        margin-right: 14px;
+    }
+    .video-ply-btn a {
+        height: 110px;
+        width: 110px;
+        line-height: 110px
+    }
+    .video-ply-btn a::before,
+    .video-ply-btn a::after {
+        height: 110px;
+        width: 110px;
+    }
+    .video-ply-btn {
+        padding-top: 100px;
+        padding-left: 65px;
+    }
+    .core-features {
+        padding-top: 100px;
+    }
+    .strm-flatfrm-img {
+        top: 100px;
+        width: 50%;
+    }
+    #strm-flatfrm {
+        padding: 110px 0 115px;
+    }
+    .flatfrm-list li {
+        padding: 0 20px 25px 0;
+    }
+    #counter-area {
+        padding: 130px 0 110px;
+    }
+    .feat-bg {
+        width: 35%;
+        top: -15px
+    }
+    .feat-single {
+        padding: 50px 0;
+    }
+    #feat-area {
+        padding: 120px 0 85px;
+    }
+    #pricing-area {
+        padding: 0 0 130px;
+    }
+    .addons li {
+        padding: 8px 16px;
+        margin-right: 4px;
+        font-size: 14px;
+    }
+    #download-area {
+        padding: 0 0 140px;
+        background-position: left;
+        background-size: contain;
+    }
+    .down-btn a {
+        padding: 8px 25px;
+    }
+    #sport-schdul-area {
+        padding: 120px 0 40px;
+    }
+    #faq-area {
+        padding: 120px 0 130px;
+        background-position: center;
+    }
+    .chanl-logo {
+        top: 60px;
+    }
+    #footer {
+        background-position: bottom;
+        padding: 70px 0 0;
+    }
+    .footer-btm {
+        margin-top: 130px;
+    }
+    .feat-cont.left,
+    .feat-img.left {
+        padding-left: 10%;
+    }
+    .feat-img.right,
+    .feat-cont.right {
+        padding-right: 10%;
+    }
+    .sort-by {
+        margin-left: -50px;
+    }
+    .price-amount h2 {
+        font-size: 50px;
+    }
+    .ribbon {
+        font-size: 18px;
+        padding: 4px 15px;
+        top: 50px;
+        right: -30px;
+    }
+    #core-features {
+        padding: 130px 0 0;
+    }
+    .core-feat-box {
+        margin-top: -280px;
+    }
+    .sec-heading h5,
+    .strm-cont h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .core-features {
+        padding-bottom: 0;
+    }
+    .counter-single .icon:after {
+        width: 92px;
+        height: 92px;
+    }
+    .add-item{
+        width: 100%;
+    }
+    .down-cont{
+        text-align: center;
+    }
+    
+    .contact-thumb{
+        display: none;
+    }
+    .contact-element{
+        display: none;
+    }
+    .platform-area{
+        margin-top: 0;
+    }
+}
+
+
+/*--------------------------------------------------------------
+    tablet
+---------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .testimonial-section{
+        padding-top: 0;
+    }
+    #NavbarContent {
+        background-color: #fff;
+        border: 1px solid #e6f0fa;
+        margin-top: 20px;
+    }
+    .navbar-nav {
+        padding: 25px 40px 20px;
+    }
+    .navbar-toggler {
+        background-color: #fff;
+    }
+    .nav.navbar-nav.login-btn {
+        text-align: center;
+    }
+    .navbar-nav.login-btn .nav-link {
+        display: inline-block;
+        padding: 10px 40px
+    }
+    .nav.navbar-nav.login-btn {
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+    .ver-2 .nav-link,
+    #header.sticky .ver-2 .navbar-nav.login-btn .nav-link,
+    #header.sticky .ver-2 .navbar-nav.login-btn .nav-link {
+        color: #143250;
+    }
+    #header.sticky .navbar-toggler {
+        background-color: #143250;
+        color: #fff;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    h5 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .caption h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #home-area {
+        padding: 150px 0 0px;
+    }
+    #home-area.bg {
+        padding-bottom: 300px;
+    }
+    .home-img {
+        width: 50%;
+    }
+    .video-ply-btn a {
+        height: 110px;
+        width: 110px;
+        line-height: 110px
+    }
+    .video-ply-btn a::before,
+    .video-ply-btn a::after {
+        height: 110px;
+        width: 110px;
+    }
+    .video-ply-btn {
+        padding-top: 20%;
+        padding-left: 0;
+        text-align: center;
+    }
+    .caption-btn a {
+        padding: 8px 26px;
+        margin-right: 16px;
+        margin-top: 30px;
+        font-size: 15px;
+    }
+    .core-feat-box {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+        padding: 100px 0 40px;
+        margin-top: -285px;
+    }
+    .strm-flatfrm-img {
+        top: 75px;
+    }
+    .core-features {
+        padding-top: 100px;
+    }
+    .strm-flatfrm-img {
+        width: 50%;
+    }
+    .flatfrm-list li {
+        padding: 0 10px 15px 0;
+    }
+    .flatfrm-list li a i {
+        font-size: 20px;
+    }
+    .flatfrm-list li a {
+        width: 80px;
+        height: 80px;
+        line-height: 54px;
+        font-size: 14px;
+        padding: 16px 0 0;
+    }
+    #strm-flatfrm {
+        padding: 100px 0 85px;
+    }
+    .counter-single .icon-inner {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        margin: 17px auto 0;
+    }
+    .counter-single .icon {
+        width: 110px;
+        height: 110px;
+    }
+    .counter-single .icon::before {
+        left: 7px;
+        top: 7px;
+        width: 95px;
+        height: 95px;
+    }
+    #counter-area {
+        padding: 100px 0 75px;
+    }
+    .sec-heading h4 {
+        margin-bottom: 8px;
+    }
+    .feat-bg {
+        width: 40%;
+    }
+    .feat-single {
+        padding: 40px 0;
+    }
+    #feat-area {
+        padding: 100px 0 60px;
+    }
+    #pricing-area {
+        padding: 0 0 50px;
+    }
+    .price-amount h2 sub {
+        margin-left: 0;
+    }
+    .price-details li {
+        font-size: 15px;
+    }
+    .pricing-tbl-single {
+        padding: 32px 10px 65px;
+    }
+    .price-btn a {
+        padding: 8px 0;
+        font-size: 13px;
+    }
+    .addons li {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    #download-area {
+        padding: 100px 0;
+        background-size: cover;
+    }
+    .download-img {
+        bottom: 0;
+        width: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        top: 50%;
+        margin-top: 120px;
+    }
+    .down-btn a {
+        padding: 6px 12px 8px 20px;
+        margin-right: 6px;
+        font-size: 14px;
+    }
+    .down-btn a .icon {
+        font-size: 25px;
+        margin: 9px 0 0 0;
+        padding-right: 30px;
+    }
+    .sort-by {
+        right: 190px;
+    }
+    .sec-heading {
+        padding: 0 0 50px;
+    }
+    #sport-schdul-area {
+        padding: 50px 0 100px;
+        background-size: cover;
+        background-position: left;
+    }
+    #faq-area {
+        padding: 100px 0;
+    }
+    .card-header a {
+        display: block;
+        padding: 20px 65px 20px 30px;
+        border-radius: 45px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .card-header a::after {
+        top: 16px;
+    }
+    #footer {
+        background-position: bottom;
+        padding: 0;
+    }
+    .footer-btm {
+        margin-top: 100px;
+    }
+    .contact-form button {
+        padding: 14px 44px;
+        font-size: 15px;
+    }
+    #core-features .core-feat-single {
+        margin-bottom: 50px;
+    }
+    #core-features {
+        padding: 100px 0 50px;
+    }
+    .ripple-effect {
+        padding: 150px 0 300px;
+    }
+    .price-amount h2 {
+        font-size: 40px;
+    }
+    .ribbon {
+        font-size: 14px;
+        padding: 0px 14px;
+        top: 40px;
+        right: -26px;
+        font-size: 14px;
+    }
+    .sidebar-widget {
+        padding: 30px 15px 20px;
+    }
+    .breadcrumb-cont h2 {
+        font-size: 44px;
+        margin: 0 0 25px;
+    }
+    .page-breadcrumb {
+        padding: 150px 0 100px;
+    }
+    .comment-single {
+        padding: 30px 15px 12px;
+    }
+    .avatar {
+        width: 20%;
+    }
+    .comnt-text {
+        width: 80%;
+    }
+    .comment-single.reply {
+        margin-left: 30px;
+    }
+    .feat-cont.left {
+        padding-left: 20px;
+    }
+    .feat-img.right,
+    .feat-cont.right {
+        padding-right: 20px;
+    }
+    .feat-img {
+        position: relative;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        top: 50%;
+    }
+    .sort-by {
+        margin-left: -60px;
+    }
+    .rec-icon {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+    }
+    .rec-icon span {
+        font-size: 10px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        padding-left: 20px;
+    }
+    .core-features {
+        padding-bottom: 20px;
+    }
+    .sec-heading h5,
+    .strm-cont h5 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .counter-single .icon:after {
+        width: 92px;
+        height: 92px;
+    }
+    .add-item{
+        width: 100%;
+    }
+    .down-cont{
+        text-align: center;
+    }
+    .client-item p{
+        width: 100%;
+    }
+    .contact-thumb{
+        display: none;
+    }
+    .contact-element{
+        display: none;
+    }
+    .platform-area{
+        margin-top: 0;
+    }
+    .platform-area{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+/*--------------------------------------------------------------
+    large mobile
+----------------------------------------------------------------*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #NavbarContent {
+        background-color: #fff;
+        border: 1px solid #e6f0fa;
+        margin-top: 20px;
+    }
+    .navbar-nav {
+        padding: 25px 40px 20px;
+    }
+    .navbar-toggler {
+        background-color: #fff;
+    }
+    .nav.navbar-nav.login-btn {
+        text-align: center;
+    }
+    .navbar-nav.login-btn .nav-link {
+        display: inline-block;
+        padding: 10px 40px
+    }
+    .nav.navbar-nav.login-btn {
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+    .ver-2 .nav-link,
+    #header.sticky .ver-2 .navbar-nav.login-btn .nav-link,
+    #header.sticky .ver-2 .navbar-nav.login-btn .nav-link {
+        color: #143250;
+    }
+    #header.sticky .navbar-toggler {
+        background-color: #143250;
+        color: #fff;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 32px
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 28px
+    }
+    h5 {
+        font-size: 14px;
+        line-height: 24px
+    }
+    h6 {
+        font-size: 14px;
+        line-height: 24px
+    }
+    .home-img {
+        display: none;
+    }
+    #home-area {
+        padding: 150px 0 0;
+    }
+    .video-ply-btn{
+        display: none;
+    }
+    .video-ply-btn a {
+        height: 110px;
+        width: 110px;
+        line-height: 110px
+    }
+    .video-ply-btn a::before,
+    .video-ply-btn a::after {
+        height: 110px;
+        width: 110px;
+    }
+    .caption h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .caption-btn a {
+        padding: 8px 22px;
+        margin-right: 12px;
+        font-size: 14px;
+    }
+    .core-features {
+        padding-bottom: 0px;
+    }
+    .caption h5 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .video-ply-btn {
+        padding-top: 100px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .core-features {
+        padding-top: 90px;
+    }
+    .core-feat-single {
+        margin-bottom: 45px;
+    }
+    .core-feat-single h6 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .strm-flatfrm-img {
+        position: unset;
+        width: 100%
+    }
+    #strm-flatfrm {
+        padding: 50px 0 90px;
+    }
+    .strm-cont h4 {
+        margin-bottom: 10px;
+    }
+    .flatfrm-list li a {
+        width: 75px;
+        height: 75px;
+        font-size: 14px;
+        padding: 12px 0 0;
+        line-height: 54px;
+    }
+    .flatfrm-list li {
+        padding: 0 15px 20px 0;
+    }
+    .flatfrm-list li a i {
+        font-size: 20px;
+    }
+    .flatfrm-list {
+        padding-top: 35px;
+        padding-bottom: 65px;
+    }
+    .counter-single .icon-inner {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        margin: 17px auto 0;
+    }
+    .counter-single .icon {
+        width: 110px;
+        height: 110px;
+    }
+    .counter-single .icon::before {
+        left: 7px;
+        top: 7px;
+        width: 95px;
+        height: 95px;
+    }
+    .counter-single h2 {
+        margin: 20px 0 12px;
+    }
+    .counter-single {
+        margin-bottom: 50px;
+    }
+    #counter-area {
+        padding: 100px 0 50px;
+    }
+    .feat-cont {
+        overflow: hidden;
+    }
+    .sec-heading {
+        padding: 0 0 45px;
+    }
+    .feat-single {
+        padding: 0 0 80px;
+    }
+    #feat-area {
+        padding: 100px 0 0;
+    }
+    .pricing-tbl-single {
+        margin-bottom: 80px;
+    }
+    .price-btn a {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    .price-amount h2 sub {
+        margin-left: 0px;
+    }
+    .price-amount h2 {
+        font-size: 36px;
+    }
+    .addons li {
+        padding: 6px 10px;
+        margin-right: 10px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    #pricing-area {
+        padding: 0 0 70px;
+    }
+    .download-img {
+        position: unset;
+        margin-top: 90px;
+        width: 100%;
+        top: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    .down-btn a {
+        padding: 6px 20px;
+        margin-right: 15px;
+    }
+    #download-area {
+        padding: 100px 0;
+        background-size: cover;
+    }
+    .chanl-single img {
+        width: 100%;
+    }
+    .pricing-btm {
+        margin-top: -260px;
+        padding: 0 0 30px;
+    }
+    #faq-area {
+        padding: 30px 0 0;
+    }
+    #sport-schdul-area {
+        padding: 100px 0 50px;
+    }
+    .chanl-logo {
+        top: 150px;
+    }
+    .card-body {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .card-header a {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #footer,
+    .contact-cont {
+        padding: 100px 0 0;
+    }
+    .contact-cont h2 {
+        color: #fff;
+    }
+    .contact-cont p {
+        color: #ddd;
+    }
+    .footer-btm {
+        margin-top: 70px;
+        text-align: center
+    }
+    .contact-form button {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+    .footer-social {
+        text-align: center !important;
+        margin: 20px 0 0;
+    }
+    .video-ply-btn.two {
+        margin-top: 75px;
+    }
+    #home-area.bg {
+        padding-bottom: 300px;
+    }
+    #core-features {
+        padding: 100px 0 40px;
+    }
+    .ripple-effect {
+        padding: 140px 0 300px;
+    }
+    .breadcrumb-cont h2 {
+        font-size: 44px;
+        margin: 0 0 25px;
+    }
+    .core-feat-box {
+        padding: 100px 0 45px;
+        margin-top: -230px
+    }
+    .page-breadcrumb {
+        padding: 150px 0 100px;
+    }
+    .blog-wrap {
+        padding: 100px 0 60px;
+    }
+    .blog-sidebar {
+        margin-top: 100px;
+    }
+    .comment-single {
+        padding: 30px 15px 12px;
+    }
+    .avatar {
+        width: 20%;
+    }
+    .comnt-text {
+        width: 80%;
+    }
+    .comment-single.reply {
+        margin-left: 30px;
+    }
+    .schedule-search {
+        height: auto;
+        text-align: center;
+        padding: 30px 60px 25px
+    }
+    .search-left select {
+        margin: 0 auto;
+        padding: 0;
+        border-radius: 30px;
+        text-align: center
+    }
+    .selc-sports select {
+        float: none;
+        margin: 0 auto;
+        text-align: center
+    }
+    .selc-sports span {
+        display: none
+    }
+    .calendr-item h3 {
+        margin-bottom: 0;
+    }
+    .search-left {
+        margin-bottom: 10px;
+    }
+    .search-left select {
+        width: 155px;
+    }
+    .selc-sports select {
+        width: 100%;
+    }
+    .feat-cont.left,
+    .feat-img.left {
+        padding-left: 0;
+    }
+    .feat-img.right,
+    .feat-cont.right {
+        padding-right: 0;
+    }
+    .feat-img.right {
+        padding-top: 25px;
+    }
+    .feat-cont.right {
+        padding-top: 40px;
+    }
+    .pricing-top {
+        padding: 210px 0 265px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        padding-left: 20px;
+    }
+    .feat-bg {
+        display: none;
+    }
+    .rec-icon {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .rec-icon span {
+        font-size: 10px;
+    }
+    .sec-heading h5,
+    .strm-cont h5,
+    .feat-cont p,
+    .down-cont p,
+    p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .counter-single .icon:after {
+        width: 92px;
+        height: 92px;
+    }
+    .add-item{
+        width: 100%;
+    }
+    .down-cont{
+        text-align: center;
+    }
+    .client-item p{
+        width: 100%;
+    }
+    .contact-thumb{
+        display: none;
+    }
+    .contact-element{
+        display: none;
+    }
+    .platform-area{
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .chanl-single-logo img{
+        width: 20px;
+    }
+    .footer-area{
+        padding: 40px 0 0;
+    }
+    .testimonial-section{
+        padding-top: 120px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+   medium mobile
+----------------------------------------------------------------*/
+
+@media only screen and (min-width: 360px) and (max-width: 479px) {
+    #NavbarContent {
+        background-color: #fff;
+        border: 1px solid #e6f0fa;
+        margin-top: 20px;
+    }
+    .navbar-nav {
+        padding: 25px 40px 20px;
+    }
+    .navbar-toggler {
+        background-color: #fff;
+    }
+    .nav.navbar-nav.login-btn {
+        text-align: center;
+    }
+    .navbar-nav.login-btn .nav-link {
+        display: inline-block;
+        padding: 10px 40px
+    }
+    .nav.navbar-nav.login-btn {
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+    .ver-2 .nav-link,
+    #header.sticky .ver-2 .navbar-nav.login-btn .nav-link,
+    #header.sticky .ver-2 .navbar-nav.login-btn .nav-link {
+        color: #143250;
+    }
+    #header.sticky .navbar-toggler {
+        background-color: #143250;
+        color: #fff;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 30px
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 28px
+    }
+    h5 {
+        font-size: 16px;
+        line-height: 26px
+    }
+    h6 {
+        font-size: 14px;
+        line-height: 24px
+    }
+    .home-img {
+        display: none;
+    }
+    #home-area {
+        padding: 150px 0 0;
+    }
+    .caption h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .caption-btn a {
+        padding: 6px 20px;
+        margin-right: 8px;
+        font-size: 12px;
+    }
+    .caption h5 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .video-ply-btn {
+        padding-top: 85px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .core-features {
+        padding-top: 90px;
+    }
+    .core-feat-single {
+        margin-bottom: 45px;
+    }
+    .core-feat-single h6 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .strm-flatfrm-img {
+        position: unset;
+        width: 100%
+    }
+    #strm-flatfrm {
+        padding: 50px 0 90px;
+    }
+    .strm-cont h4 {
+        margin-bottom: 10px;
+    }
+    .flatfrm-list li a {
+        width: 75px;
+        height: 75px;
+        font-size: 14px;
+        padding: 12px 0 0;
+    }
+    .flatfrm-list li {
+        padding: 0 15px 20px 0;
+    }
+    .flatfrm-list li a i {
+        font-size: 20px;
+    }
+    .flatfrm-list {
+        padding-top: 35px;
+        padding-bottom: 65px;
+    }
+    .counter-single .icon-inner {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        margin: 17px auto 0;
+    }
+    .core-features {
+        padding-bottom: 0;
+    }
+    .counter-single .icon {
+        width: 110px;
+        height: 110px;
+    }
+    .counter-single .icon::before {
+        left: 7px;
+        top: 7px;
+        width: 95px;
+        height: 95px;
+    }
+    .counter-single h2 {
+        margin: 20px 0 12px;
+    }
+    .counter-single {
+        margin-bottom: 50px;
+    }
+    #counter-area {
+        padding: 100px 0 50px;
+    }
+    .feat-cont {
+        overflow: hidden;
+    }
+    .sec-heading {
+        padding: 0 0 45px;
+    }
+    .feat-single {
+        padding: 0 0 65px;
+    }
+    #feat-area {
+        padding: 100px 0 0;
+    }
+    .pricing-tbl-single {
+        margin-bottom: 80px;
+    }
+    .price-btn a {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    .price-amount h2 sub {
+        margin-left: 0px;
+    }
+    .price-amount h2 {
+        font-size: 36px;
+    }
+    .addons li {
+        padding: 6px 10px;
+        margin-right: 10px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    #pricing-area {
+        padding: 0 0 70px;
+    }
+    .download-img {
+        position: unset;
+        margin-top: 70px;
+        width: 100%;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    .down-btn a {
+        padding: 6px 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .down-btn a .icon {
+        font-size: 22px;
+        margin: 8px 0 0 0;
+        padding-right: 26px;
+        padding-left: 6px;
+    }
+    #download-area {
+        padding: 100px 0;
+        background-size: cover;
+    }
+    .chanl-single img {
+        width: 100%;
+    }
+    .pricing-btm {
+        margin-top: -260px;
+        padding: 0 0 30px;
+    }
+    #faq-area {
+        padding: 30px 0 0;
+    }
+    #sport-schdul-area {
+        padding: 100px 0 50px;
+    }
+    .chanl-logo {
+        top: 80px;
+    }
+    .card-body {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .card-header a {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #footer,
+    .contact-cont {
+        padding: 100px 0 0;
+    }
+    .contact-cont h2 {
+        color: #fff;
+    }
+    .contact-cont p {
+        color: #ddd;
+    }
+    .footer-btm {
+        margin-top: 70px;
+        text-align: center
+    }
+    .contact-form button {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+    .footer-social {
+        text-align: center !important;
+        margin: 20px 0 0;
+    }
+    .card-header a::after {
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+        top: 30px;
+    }
+    .contact-title h4 {
+        margin-bottom: 10px;
+    }
+    .contact-form input {
+        padding-left: 20px;
+    }
+    .video-ply-btn.two {
+        margin-top: 80px;
+    }
+    #home-area.bg {
+        padding-bottom: 210px;
+    }
+    #core-features {
+        padding: 100px 0 40px;
+    }
+    .ripple-effect {
+        padding: 140px 0 220px;
+    }
+    .breadcrumb-cont h2 {
+        font-size: 36px;
+        margin: 0 0 20px;
+    }
+    .page-breadcrumb {
+        padding: 150px 0 100px;
+    }
+    .blog-wrap {
+        padding: 100px 0 60px;
+    }
+    .blog-sidebar {
+        margin-top: 80px;
+    }
+    .post-cont {
+        padding: 10px 15px 40px;
+    }
+    .comment-single {
+        padding: 30px 15px 12px;
+    }
+    .avatar {
+        width: 28%;
+    }
+    .comnt-text {
+        width: 72%;
+    }
+    .comment-single.reply {
+        margin-left: 30px;
+    }
+    .schedule-search {
+        height: auto;
+        text-align: center;
+        padding: 30px 20px 25px
+    }
+    .search-left,
+    .search-right {
+        float: none;
+        width: 100%;
+        padding-left: 0
+    }
+    .search-right {
+        float: none;
+        width: 100%;
+        margin-top: 15px
+    }
+    .search-left select {
+        margin: 0 auto;
+        padding: 0;
+        border-radius: 30px;
+        text-align: center
+    }
+    .selc-sports select {
+        float: none;
+        margin: 0 auto;
+        text-align: center
+    }
+    .month,
+    .sort-by {
+        position: unset;
+    }
+    .selc-sports span {
+        display: none
+    }
+    .calendr-item h3 {
+        margin-bottom: 0;
+    }
+    .search-left select {
+        width: 155px;
+    }
+    .selc-sports select {
+        width: 100%;
+    }
+    .feat-cont.left,
+    .feat-img.left {
+        padding-left: 0;
+    }
+    .feat-img.right,
+    .feat-cont.right {
+        padding-right: 0;
+    }
+    .feat-img.right {
+        padding-top: 25px;
+    }
+    .feat-cont.right {
+        padding-top: 40px;
+    }
+    .pricing-top {
+        padding: 210px 0 265px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        padding-left: 20px;
+    }
+    .feat-bg {
+        display: none;
+    }
+    .rec-icon {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .rec-icon span {
+        font-size: 10px;
+    }
+    .core-feat-box {
+        padding: 60px 0 10px;
+    }
+    .sec-heading h5,
+    .strm-cont h5,
+    .feat-cont p,
+    .down-cont p,
+    .contact-cont p,
+    p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .chanl-cont {
+        left: 0;
+    }
+    .counter-single .icon:after {
+        width: 92px;
+        height: 92px;
+    }
+    .add-item{
+        width: 100%;
+    }
+    .down-cont{
+        text-align: center;
+    }
+    .client-item p{
+        width: 100%;
+    }
+    .contact-thumb{
+        display: none;
+    }
+    .contact-element{
+        display: none;
+    }
+}
+
+
+/*--------------------------------------------------------------
+    small mobile
+----------------------------------------------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 359px) {
+    .video-ply-btn{
+        display: none;
+    }
+    #NavbarContent {
+        background-color: #fff;
+        border: 1px solid #e6f0fa;
+        margin-top: 20px;
+    }
+    .navbar-nav {
+        padding: 25px 40px 20px;
+    }
+    .navbar-toggler {
+        background-color: #fff;
+    }
+    .nav.navbar-nav.login-btn {
+        text-align: center;
+    }
+    .navbar-nav.login-btn .nav-link {
+        display: inline-block;
+        padding: 10px 40px
+    }
+    .nav.navbar-nav.login-btn {
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+    .ver-2 .nav-link,
+    #header.sticky .ver-2 .navbar-nav.login-btn .nav-link,
+    #header.sticky .ver-2 .navbar-nav.login-btn .nav-link {
+        color: #143250;
+    }
+    #header.sticky .navbar-toggler {
+        background-color: #143250;
+        color: #fff;
+    }
+    h1 {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    h3 {
+        font-size: 20px;
+        line-height: 30px
+    }
+    h4 {
+        font-size: 18px;
+        line-height: 28px
+    }
+    h5 {
+        font-size: 16px;
+        line-height: 26px
+    }
+    h6 {
+        font-size: 14px;
+        line-height: 24px
+    }
+    .home-img {
+        display: none;
+    }
+    #home-area {
+        padding: 150px 0 0;
+    }
+    .caption h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .caption-btn a {
+        padding: 6px 16px;
+        margin-right: 4px;
+        font-size: 12px;
+    }
+    .caption h5 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .core-features {
+        padding-top: 90px;
+    }
+    .core-feat-single {
+        margin-bottom: 45px;
+    }
+    .core-feat-single h6 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .strm-flatfrm-img {
+        position: unset;
+        width: 100%
+    }
+    #strm-flatfrm {
+        padding: 50px 0 90px;
+    }
+    .strm-cont h4 {
+        margin-bottom: 10px;
+    }
+    .flatfrm-list li a {
+        width: 75px;
+        height: 75px;
+        line-height: 52px;
+        font-size: 14px;
+        padding: 12px 0 0;
+    }
+    .flatfrm-list li {
+        padding: 0 15px 20px 0;
+    }
+    .flatfrm-list li a i {
+        font-size: 20px;
+    }
+    .flatfrm-list {
+        padding-top: 35px;
+        padding-bottom: 65px;
+    }
+    .counter-single .icon-inner {
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        margin: 17px auto 0;
+    }
+    .counter-single .icon {
+        width: 110px;
+        height: 110px;
+    }
+    .counter-single .icon::before {
+        left: 7px;
+        top: 7px;
+        width: 95px;
+        height: 95px;
+    }
+    .counter-single h2 {
+        margin: 20px 0 12px;
+    }
+    .counter-single {
+        margin-bottom: 50px;
+    }
+    #counter-area {
+        padding: 100px 0 50px;
+    }
+    .feat-cont {
+        overflow: hidden;
+    }
+    .sec-heading {
+        padding: 0 0 45px;
+    }
+    .feat-single {
+        padding: 0 0 40px;
+    }
+    #feat-area {
+        padding: 100px 0 0;
+    }
+    .pricing-tbl-single {
+        margin-bottom: 80px;
+    }
+    .price-btn a {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    .price-amount h2 sub {
+        margin-left: 0px;
+    }
+    .price-amount h2 {
+        font-size: 36px;
+    }
+    .addons li {
+        padding: 6px 10px;
+        margin-right: 10px;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    #pricing-area {
+        padding: 0 0 70px;
+    }
+    .download-img {
+        position: unset;
+        margin-top: 40px;
+        width: 100%;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    .down-btn a {
+        padding: 6px 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .down-btn a .icon {
+        font-size: 22px;
+        margin: 8px 0 0 0;
+        padding-right: 22px;
+        padding-left: 6px;
+    }
+    #download-area {
+        padding: 100px 0;
+        background-size: cover;
+    }
+    .chanl-single img {
+        width: 100%;
+    }
+    .pricing-btm {
+        margin-top: -260px;
+        padding: 0 0 30px;
+    }
+    #faq-area {
+        padding: 30px 0 0;
+    }
+    #sport-schdul-area {
+        padding: 100px 0 50px;
+    }
+    .chanl-logo {
+        top: 70px;
+    }
+    .card-body {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .card-header a {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    #footer,
+    .contact-cont {
+        padding: 80px 0 0;
+    }
+    .contact-cont h2 {
+        color: #fff;
+    }
+    .contact-cont p {
+        color: #ddd;
+    }
+    .footer-btm {
+        margin-top: 70px;
+        text-align: center
+    }
+    .contact-form button {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+    .footer-social {
+        text-align: center !important;
+        margin: 20px 0 0;
+    }
+    .card-header a::after {
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+        top: 30px;
+    }
+    .contact-title h4 {
+        margin-bottom: 10px;
+    }
+    .contact-form input {
+        padding-left: 20px;
+    }
+    .chanl-logo span {
+        font-size: 24px;
+    }
+    .chanl-logo i {
+        font-size: 28px;
+    }
+    .video-ply-btn.two {
+        margin-top: 60px;
+    }
+    #home-area.bg {
+        padding-bottom: 200px;
+    }
+    #core-features {
+        padding: 100px 0 40px;
+    }
+    .ripple-effect {
+        padding: 140px 0 180px;
+    }
+    .breadcrumb-cont h2 {
+        font-size: 44px;
+        margin: 0 0 25px;
+    }
+    .page-breadcrumb {
+        padding: 150px 0 100px;
+    }
+    .blog-wrap {
+        padding: 100px 0 60px;
+    }
+    .blog-sidebar {
+        margin-top: 80px;
+    }
+    .post-cont {
+        padding: 10px 15px 40px;
+    }
+    .comment-single {
+        padding: 30px 15px 12px;
+    }
+    .avatar {
+        width: 30%;
+    }
+    .comnt-text {
+        width: 70%;
+    }
+    .comment-single.reply {
+        margin-left: 20px;
+    }
+    .sidebar-widget {
+        padding: 30px 20px 20px;
+    }
+    .schedule-search {
+        height: auto;
+        text-align: center;
+        padding: 30px 0 25px 15px
+    }
+    .search-left,
+    .search-right {
+        float: none;
+        width: 100%;
+        padding-left: 0
+    }
+    .search-right {
+        float: none;
+        width: 100%;
+        margin-top: 15px
+    }
+    .search-left select {
+        margin: 0 auto;
+        padding: 0;
+        border-radius: 30px;
+        text-align: center
+    }
+    .selc-sports select {
+        float: none;
+        margin: 0 auto;
+        text-align: center
+    }
+    .month,
+    .sort-by {
+        position: unset;
+    }
+    .selc-sports span {
+        display: none
+    }
+    .calendr-item h3 {
+        margin-bottom: 0;
+    }
+    .search-left select {
+        width: 155px;
+    }
+    .selc-sports select {
+        width: 100%;
+    }
+    .sort-by,
+    .month {
+        margin-right: -20px;
+    }
+    .feat-cont.left,
+    .feat-img.left {
+        padding-left: 0;
+    }
+    .feat-img.right,
+    .feat-cont.right {
+        padding-right: 0;
+    }
+    .feat-img.right {
+        padding-top: 25px;
+    }
+    .feat-cont.right {
+        padding-top: 40px;
+    }
+    .pricing-top {
+        padding: 210px 0 265px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        padding-left: 20px;
+    }
+    .feat-bg {
+        display: none;
+    }
+    .rec-icon {
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .rec-icon span {
+        font-size: 10px;
+    }
+    .ribbon {
+        font-size: 16px;
+        padding: 4px 15px;
+        top: 42px;
+        right: -16px;
+    }
+    .sec-heading h5,
+    .strm-cont h5,
+    .feat-cont p,
+    .down-cont p,
+    .contact-cont p,
+    p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .chanl-cont {
+        left: 0;
+    }
+    .core-feat-box {
+        padding: 70px 0 10px;
+    }
+    .core-features {
+        padding-bottom: 0;
+    }
+    .counter-single .icon:after {
+        width: 92px;
+        height: 92px;
+    }
+    .platform-area{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .add-item{
+        width: 100%;
+    }
+    .download-thumb{
+        display: none;
+    }
+    .down-cont{
+        text-align: center;
+    }
+    .client-item p{
+        width: 100%;
+    }
+    .contact-thumb{
+        display: none;
+    }
+    .contact-element{
+        display: none;
+    }
+    .platform-area{
+        margin-top: 0;
+    }
+    .chanl-single-logo a{
+        display: none;
+    }
+    .footer-area{
+        padding: 40px 0 0;
+    }
+    .testimonial-section{
+        padding-top: 120px;
+    }
+    .down-cont {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}

@@ -1,0 +1,87 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}liste des Reservations {% endblock %}
+
+ {% block section1 %}
+     <div id="wrapper">
+
+
+         <!--header end-->
+
+         <!--product-info-->
+         <div class="free-shipping-a cart ptb-90">
+             <div class="container-fluid">
+                 <div class="row justify-contect-center">
+
+
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!---free shipping-a-->
+         <section class="cart-block wfp">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="table-responsive wfp">
+                             <table class="table table-bordered table-hover">
+                                 <thead>
+                                 <tr>
+                                     <th class="t-product">Idrsvparking</th>
+                                     <th class="t-quantity">Email </th>
+                                     <th class="t-total">DateD</th>
+                                     <th class="t-total">DateF</th>
+
+                                 </tr>
+                                 </thead>
+                                 <tbody>
+                                 {% for reservationparking in reservationparkings %}
+                                     <tr>
+
+                                         <td class="t-product">
+
+                                             <div class="cart-product-detail">
+
+
+                                                 <div class="overlay"></div>
+
+
+                                                 <div class="cart-product-info">
+                                                     {{ reservationparking.idrsvparking }}
+
+                                                 </div>
+                                             </div>
+                                         </td>
+
+                                         <td class="t-product">
+                                             {{ reservationparking.email }}
+
+
+                                         </td>
+
+
+                                         <td class="t-quantity">
+                                             {{  reservationparking.dateF  |date('d-m-Y')  }}
+
+                                         </td>
+
+
+                                         <td class="t-product">
+                                         {{ reservationparking.dateD  |date('d-m-Y')  }}
+                                         </td>
+
+                                     </tr>
+
+
+                                 {% endfor %}
+                                 </tbody>
+                             </table>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+     </div>
+ {% endblock %}

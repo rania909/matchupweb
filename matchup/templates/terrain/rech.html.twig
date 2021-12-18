@@ -1,0 +1,58 @@
+{% extends 'base3.html.twig' %}
+
+
+{% block title %}Terrain index{% endblock %}
+
+{% block main %}
+    <h1>Gestion Terrain</h1>
+    <input type="text" id="search" class="form-control" placeholder="Search">
+    <table class="table">
+        <th><a class="btn-primary" href="/terrain/tri"> Tri par emplacement</a> </th>
+        <thead>
+        <tr>
+            <th>IdTerrain</th>
+            <th>NomTerrain</th>
+            <th>Emplacement</th>
+            <th>Type</th>
+            <th>Etat</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for terrain in terrains %}
+            <tr>
+                <td>{{ terrain.idTerrain }}</td>
+                <td>{{ terrain.nomTerrain }}</td>
+                <td>{{ terrain.emplacement }}</td>
+                <td>{{ terrain.type }}</td>
+                <td>{{ terrain.etat }}</td>
+                <td>
+                    <a href="{{ path('terrain_show', {'idTerrain': terrain.idTerrain}) }}"class="btn-outline-info">Show</a>
+                    <a href="{{ path('terrain_edit', {'idTerrain': terrain.idTerrain}) }}"class="btn-outline-info">Edit</a>
+
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <tbody id="search">
+        </tbody>
+    </table>
+
+
+
+    <a href="{{ path('terrain_new') }}"class="btn-outline-info">Create new</a>
+    <a href="/terrain/stat"class="btn-outline-info">Stat</a>
+
+
+
+{% endblock %}
+
+
+
+
+

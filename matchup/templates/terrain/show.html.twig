@@ -1,0 +1,50 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}Terrain{% endblock %}
+
+{% block main %}
+<div class="main-content" >
+    <section class="section">
+        <div class="section-body">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card">
+    <h1>Terrain</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdTerrain</th>
+                <td>{{ terrain.idTerrain }}</td>
+            </tr>
+            <tr>
+                <th>NomTerrain</th>
+                <td>{{ terrain.nomTerrain }}</td>
+            </tr>
+            <tr>
+                <th>Emplacement</th>
+                <td>{{ terrain.emplacement }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ terrain.type }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ terrain.etat }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('terrain_index') }}">back to list</a>
+
+    <a href="{{ path('terrain_edit', {'idTerrain': terrain.idTerrain}) }}">edit</a>
+
+    {{ include('terrain/_delete_form.html.twig') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

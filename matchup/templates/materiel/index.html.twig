@@ -1,0 +1,66 @@
+{% extends 'base3.html.twig' %}
+
+
+
+
+
+
+{% block title %}Materiel index{% endblock %}
+
+{% block main %}
+<div class="main-content">
+    <section class="section">
+
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+
+                        <div class="card-header-form">
+                            <form>
+                                <div class="input-group">
+    <h1>Materiel index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdMateriel</th>
+                <th>NomTerrain</th>
+                <th>TypeMat</th>
+                <th>QuantMat</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for materiel in materiels %}
+            <tr>
+                <td>{{ materiel.idMateriel }}</td>
+                <td>{{ materiel.nomTerrain }}</td>
+                <td>{{ materiel.typeMat }}</td>
+                <td>{{ materiel.quantMat }}</td>
+                <td>
+                    <a href="{{ path('materiel_show', {'idMateriel': materiel.idMateriel}) }}"class="btn-outline-info">show</a>
+                    <a href="{{ path('materiel_edit', {'idMateriel': materiel.idMateriel}) }}"class="btn-outline-info">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('materiel_new') }}"class="btn-outline-info">Create new</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

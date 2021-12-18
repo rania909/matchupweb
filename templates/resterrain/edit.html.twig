@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Resterrain{% endblock %}
+
+{% block body %}
+    <h1>Edit Resterrain</h1>
+
+    {{ include('resterrain/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('resterrain_index') }}">back to list</a>
+
+    {{ include('resterrain/_delete_form.html.twig') }}
+{% endblock %}

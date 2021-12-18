@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Reservationparking{% endblock %}
+
+{% block body %}
+    <h1>Edit Reservationparking</h1>
+
+    {{ include('reservationparking/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('reservationparking_index') }}">back to list</a>
+
+    {{ include('reservationparking/_delete_form.html.twig') }}
+{% endblock %}

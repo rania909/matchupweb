@@ -1,0 +1,86 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}liste des Matchs{% endblock %}
+
+ {% block section1 %}
+     <div id="wrapper">
+
+
+         <!--header end-->
+
+         <!--product-info-->
+         <div class="free-shipping-a cart ptb-90">
+             <div class="container-fluid">
+                 <div class="row justify-contect-center">
+
+
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+                         <a href="{{ path('new_front') }}"class="badge badge-primary">Ajouter</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!---free shipping-a-->
+         <section class="cart-block wfp">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="table-responsive wfp">
+                             <table class="table table-bordered table-hover">
+                                 <thead>
+                                 <tr>
+                                     <th class="t-product">Match</th>
+                                     <th class="t-price">Type</th>
+                                     <th class="t-quantity">Nombre de joueurs</th>
+                                     <th class="t-total">Date</th>
+                                 </tr>
+                                 </thead>
+                                 <tbody>
+                                 {% for match in matchs %}
+                                 <tr>
+
+                                     <td class="t-product">
+                                         {# ------------- #}
+                                         <div class="cart-product-detail">
+
+                                                 <img  src="{{asset("images/matchs/giphy.gif")}}" alt="..." class="img-fluid" >
+                                                 <div class="overlay"></div>
+
+
+                                             <div class="cart-product-info">
+                                                 <h4><a href="#">Match</a></h4>
+
+                                             </div>
+                                         </div>
+                                     </td>
+                                     {# ------------- #}
+
+                                     {# ------------- #}
+                                     <td class="t-price">{{ match.type }}</td>
+                                     {# ------------- #}
+                                     {# ------------- #}
+                                     <td class="t-quantity">
+
+
+                                            {{ match.nbjoueurs }}
+
+
+                                     </td>
+                                     {# ------------- #}
+
+                                     {# ------------- #}
+                                     <td class="t-total">{{ match.date ? match.date|date('Y-m-d') : '' }}<a href="#"></a></td>
+                                     {# ------------- #}
+                                 </tr>
+
+
+                                 {% endfor %}
+                                 </tbody>
+                             </table>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+     </div>
+ {% endblock %}

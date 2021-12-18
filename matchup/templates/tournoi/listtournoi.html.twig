@@ -1,0 +1,78 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Liste de Tournois{% endblock %}
+
+ {% block section1 %}
+     <div id="wrapper">
+
+
+         <!--header end-->
+
+         <!--product-info-->
+         <div class="free-shipping-a cart ptb-90">
+             <div class="container-fluid">
+                 <div class="row justify-contect-center">
+
+
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <!---free shipping-a-->
+         <section class="cart-block wfp">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-12">
+                         <div class="table-responsive wfp">
+                             <table class="table table-bordered table-hover">
+                                 <thead>
+                                 <tr>
+                                     <th class="t-product">Tournoi</th>
+                                     <th class="t-price">Nom Tournoi</th>
+                                     <th class="t-quantity">Type</th>
+
+                                 </tr>
+                                 </thead>
+                                 <tbody>
+                                 {% for tournoi in tournois %}
+                                     <tr>
+
+                                         <td class="t-product">
+                                             {# ------------- #}
+                                             <div class="cart-product-detail">
+
+                                                 <img  src="{{asset("images/matchs/trophy.png")}}" alt="..." class="img-fluid">
+                                                 <div class="overlay"></div>
+
+
+                                                 <div class="cart-product-info">
+                                                     <h4><a href="#">Tournoi</a></h4>
+
+                                                 </div>
+                                             </div>
+                                         </td>
+                                         {# ------------- #}
+
+
+                                         {# ------------- #}
+                                         <td class="t-price">{{ tournoi.nomTournoi }}</td>
+                                         {# ------------- #}
+
+                                         {# ------------- #}
+                                         <td class="t-total">{{ tournoi.type }}<a href="#"></a></td>
+                                         {# ------------- #}
+                                     </tr>
+
+
+                                 {% endfor %}
+                                 </tbody>
+                             </table>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+     </div>
+ {% endblock %}

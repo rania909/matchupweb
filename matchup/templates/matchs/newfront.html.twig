@@ -1,0 +1,77 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Match {% endblock %}
+{% block css %}
+
+
+    <!-- Template CSS -->
+
+
+    <!-- Custom style CSS -->
+
+    {{ parent() }}
+{% endblock %}
+ {% block section1 %}
+<div class="main-content" style="alignment: center" >
+    <section class="section">
+        <div class="section-body">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <a href="{{ path('matchs_new') }}"class="badge badge-primary">Ajouter</a>
+                        </div>
+                        <div class="card-body">
+             <div class="table-responsive">
+                 <script src="{{ asset('jquery.min.js') }}"></script>
+                 <table id="tableac" class="table">
+                     <tr>
+                         <th>Type</th>
+                         <th>Date</th>
+                         <th>Nombre de joueurs</th>
+
+                         <th> </th>
+                     </tr>
+                     </thead>
+                     <tbody>
+
+                     {% for match in matchs %}
+                         <tr>
+
+                             <td>{{ match.type }}</td>
+                             <td>{{ match.date ? match.date|date('Y-m-d') : '' }}</td>
+                             <td>{{ match.nbjoueurs }}</td>
+
+                             <td>
+                                 <img  src="{{asset("images/fav.png")}}" alt="..." class="img-fluid" >
+
+                             </td>
+                         </tr>
+                     {% else %}
+                         <tr>
+                             <td colspan="11">Aucun enregistrement trouvé</td>
+                         </tr>
+                     {% endfor %}
+
+
+                     </tbody>
+
+                 </table>
+             </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+                         </div>
+
+    </section>
+             </div>
+         </div>
+     </div>
+     </div>
+
+ {% endblock %}
+

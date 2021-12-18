@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html>
+
+
+{% block head %}
+<head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>matchup</title>
+        <!-- Favicon -->
+        {% block css %}
+            <link rel="shortcut icon" href="{{asset("images/matchup.png")}}" type="image/x-icon">
+            <link rel="icon" href="images/matchup.png" type="image/x-icon">
+            <!-- include the site stylesheet -->
+            <link rel="stylesheet" href="{{asset("css/bootstrap.min.css")}}">
+            <!--slick css-->
+            <link rel="stylesheet" href="{{asset("css/slick.css")}}">
+            <!--slick-theme css-->
+            <link rel="stylesheet" href="{{asset("css/slick-theme.css")}}">
+            <!-- main stylesheet -->
+            <link rel="stylesheet" href="{{asset("css/style.css")}}">
+            <!-- responsive css -->
+            <link rel="stylesheet" href="{{asset("css/responsive.css")}}">
+            <!-- color css -->
+            <link rel="stylesheet" id="ui-theme-color" href="{{asset("css/color3.css")}}">
+        {% endblock %}
+    {% endblock %}
+</head>
+
+{% block body %}
+    <body>
+    <div class="loader_wrapper">
+        <div class="loader">
+            <div class="loader-5 center"><span></span></div>
+        </div>
+    </div>
+    <!--// loader_wrapper -->
+    <div id="wrapper">
+        {% block header %}
+
+            <header id="header">
+                <div class="header-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="list-unstyled align-left menu-head">
+                                    <li><i class="flaticon-old-handphone"></i>(+216) 94 892 741 </li>
+                                    <li><i class="flaticon-black-back-closed-envelope-shape"></i>Service à la clientèle 24h/24 et 7 j/7</li>
+                                </ul>
+                                <div class="menu-1">
+                                    <i class="flaticon-menu-1"></i>
+                                </div>
+                                <ul class="list-unstyled align-right home list-navigation">
+                                    <a href="{{asset("home")}}">Accueil</a>
+
+
+                                    <li class="drop drop_list"><a href="{{ path('app_logout') }}">Logout</a>
+
+                                    </li>
+                                    {#<li><a href="{{path("blog_categories.html")}}">BLOG</a></li>
+                                <li><a href="{{path("contact_us.html")}}">CONTACT US</a></li>
+                                <li><a href="{{path("login.html")}}">LOGIN</a></li>#}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-nav">
+                    <div class="container">
+                        <div class="row" >
+                            <div class="col-lg-12">
+                                <div class="main-top-nav">
+                                    <div class="logo" style="width: 30%">
+
+                                        <img src="{{asset("images/matchup1.png")}}" alt="" class="img-fluid"style="margin: 0px auto 0px;  display: block;width: 15%;">
+                                        </a>
+                                    </div>
+                                    <!-- end-->
+                                    <div class="list-nav-menu">
+
+                                        <i class="flaticon-menu-1"></i>
+                                    </div>
+                                    <div class="list-nav">
+                                        <ul class="list-unstyled">
+                                            <a href="{{ path('profileuser') }}">Profil</a>
+                                            <a href="{{ path('list_match') }}">Match</a>
+
+                                            <a href="{{ path('fronte_parking') }}">Parking</a>
+                                            <a href="{{ path('list_tournoi') }}">Tournoi</a>
+                                            <li class="drop"><a href="{{ path('front') }}">Produits</a>
+
+                                            </li>
+                                            <div class="cart-nav">
+                                                <ul>
+
+                                                    <li><a href="{{ path('cart_index') }}"><i class="flaticon-shopping-bag" style="width: 50%"></i></a>
+
+
+                                                </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        <div id="search-item">
+            <button class="close-btn btn">
+                <i class="fa fa-times"></i>
+            </button>
+            {% block form %}
+                <form>
+                    <div class="search-block">
+                        <input type="text" placeholder="Search Item" class="search-text form-control" />
+                        <span></span>
+                        <i class="flaticon-search"></i>
+                    </div>
+                </form>
+            {% endblock %}
+        </div>
+        <!--header end-->
+        {% endblock %}
+        {% block main %}
+        <section class="slider-index home4">
+            <div class="slider4 owl-carousel-nav owl-carousel owl-theme ">
+                <div class="item">
+                    <div class="slider-item">
+                        <div class="overlay"></div>
+                        <div class="fixed-bg" style="background: url('{{asset("images/pg1.jpg")}}');"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 offset-md-6 col-sm-12">
+                                    <div class="banner ">
+                                        <div class="offer stl4" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">
+                                            <span>SKATING</span>
+                                            <span class="spn">SHOES</span>
+                                        </div>
+                                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">40% OFF</h1>
+                                        <p data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">Lorem ipsum dolor sit amet, consectetur adipiscing Quisque posuere rhoncus tortor ut posuere.</p>
+                                        <a class="btn stl1" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">SHOP NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% block item %}
+                <!--item-1-->
+                <div class="item">
+                    <div class="slider-item">
+                        <div class="overlay"></div>
+                        <div class="fixed-bg" style="background: url('{{asset("images/indx-3.jpg")}}');"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12"></div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="banner">
+                                        <div class="offer stl4" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">
+                                            <span>SKATING</span>
+                                            <span class="spn">SHOES</span>
+                                        </div>
+                                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">40% OFF</h1>
+                                        <p data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">Lorem ipsum dolor sit amet, consectetur adipiscing Quisque posuere rhoncus tortor ut posuere.</p>
+                                        <a  class="btn stl1" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">SHOP NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--item-2-->
+                <div class="item">
+                    <div class="slider-item">
+                        <div class="overlay"></div>
+                        <div class="fixed-bg" style="background: url('{{asset("images/slider-layer2.jpg")}}images/slider-layer2.jpg');"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12"></div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="banner">
+                                        <div class="offer stl4" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">
+                                            <span>SKATING</span>
+                                            <span class="spn">SHOES</span>
+                                        </div>
+                                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">40% OFF</h1>
+                                        <p data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">Lorem ipsum dolor sit amet, consectetur adipiscing Quisque posuere rhoncus tortor ut posuere.</p>
+                                        <a class="btn stl1" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">SHOP NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--item-3-->
+                <div class="item">
+                    <div class="slider-item">
+                        <div class="overlay"></div>
+                        <div class="fixed-bg" style="background: url('{{asset("images/slider-layer4.jpg")}}');"></div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12"></div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div class="banner">
+                                        <div class="offer stl4" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">
+                                            <span>SKATING</span>
+                                            <span class="spn">SHOES</span>
+                                        </div>
+                                        <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">40% OFF</h1>
+                                        <p data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">Lorem ipsum dolor sit amet, consectetur adipiscing Quisque posuere rhoncus tortor ut posuere.</p>
+                                        <a class="btn stl1" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOutRight">SHOP NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--item-4-->
+            </div>
+        </section>
+        {% endblock %}
+        <!--slider end-->
+        <section class="top-seller-a home4  ptb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title">
+                            <h2>top sellers<span>top sellers</span></h2>
+                            <p>consectetur ading Quisque posuere rhon</p>
+                            <div class="title-span">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <!--title-->
+                    </div>
+                    <div class="col-lg-12 pd0">
+                        <div class="top-sell top-sellerinfo">
+                            <div class="btn-group btn-group-justified filter-button-group" role="group" aria-label="filterImages">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default menu is-checked" data-filter="*">All</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default menu" data-filter=".shoes">badminton shoes</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default menu" data-filter=".popular">popular treadmills</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default menu" data-filter=".tennis">tennis item</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default menu" data-filter=".cricket">cricket bats</button>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default menu" data-filter=".infra">infrastructure</button>
+                                </div>
+                            </div>
+                            <div class="grid-sec1 filtered-item-wrapper grid">
+                                <div class="row">
+                                    <div class="grid-item shoes">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell1.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <i class="flaticon-eye"></i></a>
+                                                        <a class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item shoes">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell2.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a><i class="flaticon-eye"></i></a>
+                                                        <a class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item popular">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell1.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a  class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item popular">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell2.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item popular">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell3.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item tennis">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell5.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item infra">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item cricket">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell1.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a  class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item cricket">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell2.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a  class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item cricket">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell1.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a  class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item cricket">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell1.png")}}" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grid-item cricket">
+                                        <div class="block-stl1">
+                                            <div class="img-holder">
+                                                <img src="{{asset("images/sell1.png")}}images/sell1.png" alt="" class="img-fluid">
+                                            </div>
+                                            <div class="text-block">
+                                                <div class="btn-sec">
+                                                    <div class="btn-sec-a">
+                                                        <a ><i class="flaticon-eye"></i></a>
+                                                        <a class="btn1">BUY NOW</a>
+                                                        <a href="#"><i class="flaticon-like"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="h-pd">
+                                                    <a href="#">Badminton Racket</a>
+                                                    <del>$ 45</del>
+                                                    <span>$25</span>
+                                                    <p><i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star"></i>
+                                                        <i class="flaticon-star-1"></i>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--top-seller-->
+
+        <div class="bst-collection-b home4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="collec-bst-img">
+                            <div class="overlay"></div>
+                            <img src="{{asset("images/best-coll.jpg")}}" alt="" class="img-fluid">
+                            <div class="over-block stl1">
+                                <span>Sho</span>
+                                <a href="#">Shoes <br> Collection</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7">
+                        <div class="collec-bst-img">
+                            <div class="overlay"></div>
+                            <img src="{{asset("images/best-coll1.jpg")}}" alt="" class="img-fluid">
+                            <div class="over-block stl2">
+                                <span class="spn">Gym</span>
+                                <a href="#">Gym <br>   Fitness</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7 ">
+                        <div class="collec-bst-img">
+                            <div class="overlay"></div>
+                            <img src="{{asset("images/best-coll2.jpg")}}" alt="" class="img-fluid">
+                            <div class="over-block stl2">
+                                <span>Spor</span>
+                                <a href="#">Sports <br> Collection</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="collec-bst-img">
+                            <div class="overlay"></div>
+                            <img src="{{asset("images/best-coll3.jpg")}}" alt="" class="img-fluid">
+                            <div class="over-block stl3">
+                                <span class="spn">Outd</span>
+                                <a href="#">Outdoor <br> Sports</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--best-collection end-->
+        <section class="hot-deal-week home4   ptb-90">
+            <div class="container-fluid pd0">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title">
+                            <h2>hot deal of the week<span>hot deal of the week</span></h2>
+                            <p>consectetur ading Quisque posuere rhon</p>
+                            <div class="title-span">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <!--title-->
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 ">
+                        <div class="block-stl3 block-stl23">
+                            <div class="overlay"></div>
+                            <div class="img-holder">
+                                <img src="{{asset("images/stock.jpg")}}" alt="" class="img-fluid">
+                            </div>
+
+                            <div class="deal-count ">
+                                <a href="#"><span> skating shoes offer</span> </a>
+                                <span class="n-deal-tag bg2"> new</span>
+                                <ul class="countdown">
+                                    <li class="days">
+                                        <div class="number">00</div>
+                                        <div class="label">Days</div>
+                                    </li>
+                                    <li class="hours">
+                                        <div class="number">00</div>
+                                        <div class="label">Hour</div>
+                                    </li>
+                                    <li class="minutes">
+                                        <div class="number">00</div>
+                                        <div class="label">Min</div>
+                                    </li>
+                                    <li class="seconds">
+                                        <div class="number">00</div>
+                                        <div class="label">Sec</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="block-l">
+                            <div class="block-stll24">
+                                <div class="overlay"></div>
+                                <img src="{{asset("images/stock1.jpg")}}" alt="" class="img-fluid">
+                                <div class="stll24">
+                                    <a href="#"><h2>skating shoes offer</h2></a>
+                                </div>
+                            </div>
+                            <div class="block-stll24">
+                                <div class="overlay"></div>
+                                <img src="{{asset("images/stock2.jpg")}}" alt="" class="img-fluid">
+                                <div class="stll24">
+                                    <a href="#"><h2>skating shoes offer</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="block-l">
+                            <div class="block-stll24">
+                                <div class="overlay"></div>
+                                <img src="{{asset("images/stock3.jpg")}}" alt="" class="img-fluid">
+                                <div class="stll24">
+                                    <a href="#"><h2>skating shoes offer</h2></a>
+                                </div>
+                            </div>
+                            <div class="block-stll24">
+                                <div class="overlay"></div>
+                                <img src="{{asset("images/stock4.jpg")}}" alt="" class="img-fluid">
+
+                                <div class="stll24">
+                                    <a href="#"><h2>skating shoes offer</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--hot-deal-week-->
+
+        <section class="new-arrival">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title">
+                            <h2>new arrivals<span>new arrivals</span></h2>
+                            <p>consectetur ading Quisque posuere rhon</p>
+                            <div class="title-span">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--title-->
+                    <div class="col-lg-12">
+                        <div class="arrival-slider">
+                            <div class="owl-carousel owl-theme owl-carousel-slider-arrival">
+                                <div class="item">
+                                    <div class="block-stl1">
+                                        <div class="img-holder">
+                                            <img src="{{asset("images/image.jpg")}}" alt="" class="img-fluid">
+
+                                        </div>
+                                        <div class="text-block">
+                                            <div class="btn-sec">
+                                                <div class="btn-sec-a">
+                                                    <a ><i class="flaticon-eye"></i></a>
+                                                    <a class="btn1">BUY NOW</a>
+                                                    <a href="#"><i class="flaticon-like"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="h-pd">
+                                                <a href="#">Badminton Racket</a>
+                                                <del>$ 45</del>
+                                                <span>$25</span>
+                                                <p><i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star-1"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="block-stl1">
+                                        <div class="img-holder">
+                                            <img src="{{asset("images/image1.jpg")}}" alt="" class="img-fluid">
+                                            <span class="n-deal-tag bg1"> new</span>
+                                        </div>
+                                        <div class="text-block">
+                                            <div class="btn-sec">
+                                                <div class="btn-sec-a">
+                                                    <a ><i class="flaticon-eye"></i></a>
+                                                    <a class="btn1">BUY NOW</a>
+                                                    <a href="#"><i class="flaticon-like"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="h-pd">
+                                                <a href="#">Badminton Racket</a>
+                                                <del>$ 45</del>
+                                                <span>$25</span>
+                                                <p><i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star-1"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="block-stl1">
+                                        <div class="img-holder">
+                                            <img src="{{asset("images/image2.jpg")}}" alt="" class="img-fluid">
+
+                                        </div>
+                                        <div class="text-block">
+                                            <div class="btn-sec">
+                                                <div class="btn-sec-a">
+                                                    <a ><i class="flaticon-eye"></i></a>
+                                                    <a class="btn1">BUY NOW</a>
+                                                    <a href="#"><i class="flaticon-like"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="h-pd">
+                                                <a href="#">Badminton Racket</a>
+                                                <del>$ 45</del>
+                                                <span>$25</span>
+                                                <p><i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star-1"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="block-stl1">
+                                        <div class="img-holder">
+                                            <img src="{{asset("images/image3.jpg")}}" alt="" class="img-fluid">
+                                            <span class="n-deal-tag bg2"> new</span>
+                                        </div>
+                                        <div class="text-block">
+                                            <div class="btn-sec">
+                                                <div class="btn-sec-a">
+                                                    <a ><i class="flaticon-eye"></i></a>
+                                                    <a  class="btn1">BUY NOW</a>
+                                                    <a href="#"><i class="flaticon-like"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="h-pd">
+                                                <a href="#">Badminton Racket</a>
+                                                <del>$ 45</del>
+                                                <span>$25</span>
+                                                <p><i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star-1"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="block-stl1">
+                                        <div class="img-holder">
+                                            <img src="{{asset("images/image2.jpg")}}" alt="" class="img-fluid">
+                                            <span class="n-deal-tag bg1"> new</span>
+                                        </div>
+                                        <div class="text-block">
+                                            <div class="btn-sec">
+                                                <div class="btn-sec-a">
+                                                    <a ><i class="flaticon-eye"></i></a>
+                                                    <a  class="btn1">BUY NOW</a>
+                                                    <a href="#"><i class="flaticon-like"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="h-pd">
+                                                <a href="#">Badminton Racket</a>
+                                                <del>$ 45</del>
+                                                <span>$25</span>
+                                                <p><i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star"></i>
+                                                    <i class="flaticon-star-1"></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--new-arrival end-->
+
+        <div class="free-shipping-a home4 ptb-90">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-4 col-sm-12 ">
+                        <div class="shipping-a">
+                            <div class="overlay"></div>
+                            <div class="fixed-bg" style="background:url('{{asset("images/pr1.jpg")}}')"></div>
+                            <div class="inner-shipping">
+                                <span>free</span>
+                                <span class="spn">shipping</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 ">
+                        <div class="shipping-a">
+                            <div class="overlay"></div>
+                            <div class="fixed-bg" style="background:url('{{asset("images/pr1.jpg")}}')"></div>
+                            <div class="inner-shipping">
+                                <span>100%</span>
+                                <span class="spn">money back</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="shipping-a">
+                            <div class="overlay"></div>
+                            <div class="fixed-bg" style="background:url('{{asset("images/pr1.jpg")}}')"></div>
+                            <div class="inner-shipping">
+                                <span>24 hour</span>
+                                <span class="spn">support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--free-shipping-->
+        <section class="latest-blog pdb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title">
+                            <h2>our latest blog<span>our latest blog</span></h2>
+                            <p>consectetur ading Quisque posuere rhon</p>
+                            <div class="title-span">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <!--title-->
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="blog">
+                            <div class="blog-img"><img src="{{asset("images/blog.jpg")}}" alt="" class="img-fluid"></div>
+                            <div class="text-wrapper">
+                                <div class="text-block-new">
+                                    <a href="#"><h2>Etiam posuere nulla libero quis </h2></a>
+                                    <ul>
+                                        <li><a href="#"><i class="flaticon-user-silhouette"></i>My Admin</a></li>
+                                        <li><a href="#"><i class="flaticon-clock-1"></i>6 days ago</a></li>
+                                        <li><a href="#"><i class="flaticon-comment"></i>10 Comments</a></li>
+                                    </ul>
+                                    <p>Donec velit ligula, molestie id risus vitae, pretium mattis ante. Quisque fringilla id enim non sagittis. Nunc lacus metus.</p>
+                                    <a  class="btn stl2 btn-r">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="blog">
+                            <div class="blog-img"><img src="{{asset("images/blog1.jpg")}}" alt="" class="img-fluid"></div>
+                            <div class="text-wrapper">
+                                <div class="text-block-new">
+                                    <a href="#"><h2>Etiam posuere nulla libero quis </h2></a>
+                                    <ul>
+                                        <li><a href="#"><i class="flaticon-user-silhouette"></i>My Admin</a></li>
+                                        <li><a href="#"><i class="flaticon-clock-1"></i>6 days ago</a></li>
+                                        <li><a href="#"><i class="flaticon-comment"></i>10 Comments</a></li>
+                                    </ul>
+                                    <p>Donec velit ligula, molestie id risus vitae, pretium mattis ante. Quisque fringilla id enim non sagittis. Nunc lacus metus.</p>
+                                  <a  class="btn stl2 btn-r">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--latest-blog-->
+        <div class="subscribe-frm2  home2 pd1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="subscribe-frm ">
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="yourname@sport.com" name="search">
+                                    <button class="btn btn-default" type="submit">SUBSCRIBE</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--subscribe frm-->
+        {% endblock %}
+        <footer class="main-footer new-block home4  ptb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer-head">
+                            <img src="{{asset("images/footer-logo4.png")}}" alt="" class="img-fluid">
+                        </div>
+                        <div class="footer-content">
+                            <p class="p1">Morbi metus nisl, vulputate eu arcu non vehicula auctor elit. </p>
+                            <ul class="info-block">
+                                <li><i class="flaticon-home-button"></i>
+                                    <p>13/2 Elizabeth Street Melbourne VIC 3000, Australia</p>
+                                </li>
+                                <li><i class="flaticon-telephone-handle-silhouette"></i>
+                                    <p>+91 123 456 789</p>
+                                </li>
+                                <li><i class="flaticon-envelope"></i>
+                                    <p>sportbazaar@support.com</p>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled card-block card-info-block">
+                                <li>
+                                    <a href="#"><img src="{{asset("images/logo11.jpg")}}" alt="" class="img-fluid"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="{{asset("images/logo1.jpg")}}" alt="" class="img-fluid"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="{{asset("images/logo3.jpg")}}" alt="" class="img-fluid"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="{{asset("images/logo4.jpg")}}" alt="" class="img-fluid"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="{{asset("images/logo5.jpg")}}" alt="" class="img-fluid"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                        <div class="f-links">
+                            <div class="footer-head">
+                                <h3>my account</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                        <div class="f-links">
+                            <div class="footer-head">
+                                <h3>support</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Shipping Policy</a></li>
+                                    <li><a href="#">Return Policy</a></li>
+                                    <li><a href="#">Our Partner</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Shipping Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                        <div class="f-links">
+                            <div class="footer-head">
+                                <h3>our services</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Sports 365</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Management Team</a></li>
+                                    <li><a href="#">Media</a></li>
+                                    <li><a href="#">Work with Us</a></li>
+                                    <li><a href="#">Sell Through Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+                        <div class="flickr">
+                            <div class="footer-head">
+                                <h3>instagram</h3>
+                            </div>
+                            <div class="footer-content footer-effect">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-54.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-55.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-56.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-57.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-58.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-59.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-60.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-61.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="{{asset("images/layer-62.jpg")}}" alt="" class="img-fluid"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer-->
+
+        <div class="copy-right">
+            <div class="container">
+                <p><a href="#">Copyright 2018 sport bazaar All right Reserved</a></p>
+                <ul class="social-nav">
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <span id="go_to_top" class="go-to-top ">
+            <i class="flaticon-upload"></i>
+        </span>
+        <!-- go_to_top -->
+
+
+    </div>
+    {% block js %}
+        <!-- #wrapper -->
+        <!-- include jQuery -->
+        <script src="{{asset("js/jquery.min.js")}}"></script>
+        <!-- bootstrap -->
+        <script src="{{asset("js/bootstrap.min.js")}}"></script>
+        <!-- easing -->
+        <script src="{{asset("js/jquery.easing.min.js")}}"></script>
+        <!-- bootstrap -->
+        <script src="{{asset("js/owl.carousel.min.js")}}"></script>
+        <!--isotop-->
+        <script src="{{asset("js/isotope.pkgd.min.js")}}"></script>
+        <!--mixit up-->
+        <script src="{{asset("js/jquery.mixitup.js")}}"></script>
+        <!--nice select-->
+        <script src="{{asset("js/jquery.nice-select.js")}}"></script>
+        <!-- slick -->
+        <script src="{{asset("js/slick.min.js")}}"></script>
+        <!--parallax-->
+        <script src="{{asset("js/parallax.min.js")}}"></script>
+        <!-- jarallax -->
+        <script src="{{asset("js/ofi.min.js")}}"></script>
+        <script src="{{asset("js/jarallax.js")}}"></script>
+        <!-- Event -->
+        <script src="{{asset("js/Event.js")}}"></script>
+        <!-- Magnifier -->
+        <script src="{{asset("js/Magnifier.js")}}"></script>
+        <!--google map-->
+        {# <script src="{{path("https://maps.googleapis.com/maps/api/js?key=AIzaSyBP1lPhUhDU6MINpruPDinAzXffRlpzzFo")}}"></script> #}
+        <!-- custom js -->
+        <script src="{{asset("js/custom.js")}}"></script>
+    {% endblock %}
+    </body>
+
+{% endblock %}
+<!-- Mirrored from rewebsotech.com/templates/sport_bazaar/web/index_4.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Apr 2021 16:39:54 GMT -->
+</html>

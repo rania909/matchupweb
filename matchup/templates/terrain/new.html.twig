@@ -1,0 +1,27 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}New Terrain{% endblock %}
+
+{% block main %}
+    <div class="main-content">
+        <section class="section">
+            <div class="section-body">
+
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>Create new Terrain</h1>
+                        </div>
+                        <div class="card-body">
+
+
+                        <h4>Creer un neauvau terrain</h4>
+                    </div>
+                    <div class="card-body"></div></div>
+
+    {{ include('terrain/_form.html.twig') }}
+            </div>
+    <a href="{{ path('terrain_index') }}"class="badge badge-success">back to list</a>
+        </div></section></div>
+
+{% endblock %}

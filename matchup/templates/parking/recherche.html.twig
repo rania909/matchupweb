@@ -1,0 +1,25 @@
+<h2> Recherche  Parkings by Adresse</h2>
+<form method="post" >
+    <input type="text" name="adresse">
+
+    <a href=""class="badge badge-info">Recherche</a>
+</form>
+<h2> Liste de Parkings </h2>
+<table border="2">
+<tr>
+    <th>IdParking</th>
+    <th>Adresse</th>
+    <th>Nbdeplace</th>
+
+</tr>
+
+
+    {% for parking in parkings %}
+        <tr>
+    <td>{{ parking.idParking }}</td>
+    <td>{{ parking.adresse }}</td>
+    <td>{{ parking.nbdeplace }}</td>
+
+        </tr>
+    {% endfor %}
+</table>

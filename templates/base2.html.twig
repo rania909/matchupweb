@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from rewebsotech.com/templates/sport_bazaar/web/blog_single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Apr 2021 16:43:27 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-single | Sport Bazaar HTML Template</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <link rel="icon" href="images/fav.png" type="image/x-icon">
+    <!-- include the site stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--slick css-->
+    <link rel="stylesheet" href="css/slick.css">
+    <!--slick-theme css-->
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <!-- main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color css -->
+    <link rel="stylesheet" id="ui-theme-color" href="css/color3.css">
+</head>
+{% block body %}
+<body>
+{% block header %}
+<div class="loader_wrapper">
+    <div class="loader">
+        <div class="loader-5 center"><span></span></div>
+    </div>
+</div>
+<!--// loader_wrapper -->
+<div id="wrapper">
+    <header id="header">
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-unstyled align-left menu-head">
+                            <li><i class="flaticon-old-handphone"></i>(+200) 123 456 7890</li>
+                            <li><i class="flaticon-black-back-closed-envelope-shape"></i>24X7 Customer Care</li>
+                        </ul>
+                        <div class="menu-1">
+                            <i class="flaticon-menu-1"></i>
+                        </div>
+                        <ul class="list-unstyled align-right home list-navigation">
+                            <li class="drop drop_list"><a href="#">HOME</a>
+                                <ul class="list-unstyled drop-down nav">
+                                    {#<li><a href="{{path("index.html")}}">HOME1 </a></li>
+                                        <li><a href="{{path("index_2.html")}}">HOME2 </a></li>
+                                        <li><a href="{{path("index_3.html")}}">HOME3</a></li>
+                                        <li><a href="{{path("index_4.html")}}">HOME4</a></li>
+                                        <li><a href="{{path("index_5.html")}}">HOME5</a></li>#}
+                                </ul>
+                            </li>
+                            <li class="drop drop_list"><a href="#">PAGES</a>
+                                <ul class="list-unstyled drop-down nav">
+                                    {#<li><a href="{{path("product_categories_1.html")}}">PRODUCT CATEGORIES 1</a></li>
+                                        <li><a href="{{path("product_categories_2.html")}}">PRODUCT CATEGORIES 2</a></li>
+                                        <li><a href="{{path("product_categories_3.html")}}">PRODUCT CATEGORIES 3</a></li>
+                                        <li><a href="{{path("product_categories_4.html")}}">PRODUCT CATEGORIES 4</a></li>
+                                        <li><a href=" {{path("product_single.html")}}">PRODUCT SINGLE </a></li>
+                                        <li><a href="{{path("product_single_2.html")}}">PRODUCT SINGLE 2</a></li>
+                                        <li><a href="{{path("blog_categories.html")}}">BLOG CATEGORIES </a></li>
+                                        <li><a href=" {{path("blog_single.html")}}">BLOG SINGLE</a></li>
+                                        <li><a href="{{path("cart_page.html")}}">CART PAGE</a></li>
+                                        <li><a href=" {{path("order_finish_page.html")}}">ORDER FINISH</a></li>
+                                        <li><a href="{{path("shopping_checkout.html")}}">SHOPPING CHECKOUT</a></li>
+                                        <li><a href="{{path("login.html")}}">LOGIN</a></li>
+                                        <li><a href="{{path("signup_page.html")}}">SIGNUP</a></li>
+                                        <li><a href=" {{path("contact_us.html")}}">CONTACT US</a></li>
+                                        <li><a href="{{path("404_error.html")}}">404 ERROR</a></li>#}
+                                </ul>
+                            </li>
+                            {#<li><a href="{{path("blog_categories.html")}}">BLOG</a></li>
+                                <li><a href="{{path("contact_us.html")}}">CONTACT US</a></li>
+                                <li><a href="{{path("login.html")}}">LOGIN</a></li>#}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main-top-nav">
+                            <div class="logo">
+
+                                <img src="{{asset("images/logo-nav4.png")}}" alt="" class="img-fluid">
+                                </a>
+                            </div>
+                            <!-- end-->
+                            <div class="list-nav-menu">
+                                <span>All Categories</span>
+                                <i class="flaticon-menu-1"></i>
+                            </div>
+                            <div class="list-nav">
+                                <ul class="list-unstyled">
+                                    <li class="drop"><a href="#">SHOES</a>
+                                        <ul class="list-unstyled drop-down">
+                                            <li><a href="#">INDOOR SHOES </a></li>
+                                            <li><a href="#">OUTDOOR SHOES </a></li>
+                                            <li><a href="#">SPORTS SHOES</a></li>
+                                            <li><a href="#">REGULAR SHOES</a></li>
+                                            <li><a href="#">INDOOR SHOES </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop-megamenu"><a href="#">INDOOR SPORTS</a>
+                                        <div class="mega-menu-content">
+                                            <div class="menu-a">
+                                                <div class="mega-content col_a">
+                                                    <h2>BADMINTON</h2>
+                                                    <ul>
+                                                        {#<li><a href="{{path("product_categories_1.html")}}">Badminton Rackets</a></li>
+                                                            <li><a href="{{path("product_categories_2.html")}}">Feather Shuttlecocks</a></li>
+                                                            <li><a href="{{path("product_categories_3.html")}}">Nylon Shuttlecocks</a></li>
+                                                            <li><a href="{{path("product_categories_4.html")}}">Badminton Grips</a></li>#}
+                                                    </ul>
+                                                </div>
+                                                <div class="mega-content col_b">
+                                                    <h2> TABLE TENNIS </h2>
+                                                    <ul>
+                                                        {#<li><a href="{{path("product_categories_1.html")}}">Badminton Rackets</a></li>
+                                                            <li><a href="{{path("product_categories_2.html")}}">Feather Shuttlecocks</a></li>
+                                                            <li><a href="{{path("product_categories_3.html")}}">Nylon Shuttlecocks</a></li>
+                                                            <li><a href="{{path("product_categories_4.html")}}">Badminton Grips</a></li>#}
+                                                    </ul>
+                                                </div>
+                                                <div class="mega-content col_c">
+                                                    <h2>SQUASH </h2>
+                                                    <ul>
+                                                        {#<li><a href="{{path("product_categories_1.html")}}">Squash Rackets</a></li>
+                                                            <li><a href="{{path("product_categories_2.html")}}">Squash Balls</a></li>
+                                                            <li><a href="{{path("product_categories_3.html")}}">Squash Strings</a></li>
+                                                            <li><a href="{{path("product_categories_4.html")}}">Squash Goggles</a></li>#}
+                                                    </ul>
+                                                </div>
+                                                <div class="mega-content  col_d">
+                                                    <h2> SNOOKER</h2>
+                                                    <ul>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="mega-content col_e">
+                                                    <h2>BILLIARDS</h2>
+                                                    <ul>
+
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-c">
+                                                    <div class="product-menu">
+                                                        <a href="#">
+                                                            <img src="{{asset("images/mega-img1.jpg")}}" alt="" class="img-fluid">
+                                                            <div class="mega-off">
+                                                                <h2>60% OFF</h2>
+                                                                <h3>OUTDOOR</h3>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-menu stl2">
+                                                        <a href="#">
+                                                            <img src="{{asset("images/mega-img2.jpg")}}" alt="" class="img-fluid">
+                                                            <div class="mega-off">
+                                                                <h2>20% OFF</h2>
+                                                                <h3>NEW SELL</h3>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="menu-b">
+                                                <div class="product-menu stl3">
+                                                    <a href="#">
+                                                        <img src=" {{asset("images/mega-img3.jpg")}}" alt="" class="img-fluid">
+                                                        <div class="mega-off">
+                                                            <h2>50% </h2>
+                                                            <h3>Discount<br>offer</h3>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">OUTDOOR SPORTS</a></li>
+                                    <li><a href="#">GYM AND FITNESS</a></li>
+                                    <li><a href="#">SPORTS ACCESSORIES</a></li>
+                                    <li><a href="#">INFRASTRUCTURE</a></li>
+                                </ul>
+                                <!--list unstyled end-->
+
+                            </div>
+                            <div class="cart-nav">
+                                <ul>
+                                    <li><a href="#"><i class="flaticon-like"></i></a></li>
+                                    <li><a href="#"><i class="flaticon-shopping-bag"></i></a>
+                                        <div class="cart-items">
+                                            <div class="inner-wrapper">
+                                                <div class="cart-product-detail">
+                                                    <div class="img-holder">
+                                                        <img src="{{asset("images/cart-prod1.png")}}" alt="..." class="img-fluid">
+                                                    </div>
+                                                    <div class="cart-product-info">
+                                                        <a href="#"><h4 class="text-uppercase">Icominer F9+ 10.5N</h4></a>
+                                                        <p>F9+ 10.5N</p>
+                                                        <p class="price">$147.00</p>
+                                                    </div>
+                                                    <a href="#" class="remove-it"><i class="fa fa-times"></i></a>
+                                                </div>
+                                                <div class="cart-product-detail">
+                                                    <div class="img-holder">
+                                                        <img src="{{asset("images/cart-prod1.png")}}" alt="..." class="img-fluid">
+                                                    </div>
+                                                    <div class="cart-product-info">
+                                                        <a href="#"><h4 class="text-uppercase">Icominer F9+ 10.5N</h4></a>
+                                                        <p>F9+ 10.5N</p>
+                                                        <p class="price">$147.00</p>
+                                                    </div>
+                                                    <a href="#" class="remove-it"><i class="fa fa-times"></i></a>
+                                                </div>
+                                                <div class="total-p">
+                                                    <div class="img-holder">
+                                                        <p class="price">Total :</p>
+                                                    </div>
+                                                    <div class="cart-product-info">
+                                                        <p class="price">$294.00</p>
+                                                    </div>
+                                                </div>
+                                                <a href="#" class="checkout-btn">checkout</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a href="#" id="search-opener"><i class="flaticon-search"></i></a></li>
+                                </ul>
+                            </div>
+                            <!--cart nav end-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--header end-->
+    <section class="product-info">
+        <div class="overlay"></div>
+        <div class="fixed-bg" style="background: url('images/product-cate.jpg');"></div>
+        <div class="container">
+            <div class="product-menu">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">All Product</a></li>
+                </ol>
+                <h4><a href="#">All Product</a></h4>
+            </div>
+        </div>
+    </section>
+    <!--product-info-->
+    {% endblock %}
+    <!--egesmouuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu-->
+    {% block main %}
+    <section class="blog-categories-block">
+        <div class="container">
+            {% block here %}
+            {% endblock %}
+
+        </div>
+
+        {% endblock %}
+        {% blockfooter%}
+        <footer class="main-footer new-block pd-tp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="footer-head">
+                            <img src="images/footer-logo3.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="footer-content">
+                            <p class="p1">Morbi metus nisl, vulputate eu arcu non vehicula auctor elit. </p>
+                            <ul class="info-block">
+                                <li><i class="flaticon-home-button"></i>
+                                    <p>13/2 Elizabeth Street Melbourne VIC 3000, Australia</p>
+                                </li>
+                                <li><i class="flaticon-telephone-handle-silhouette"></i>
+                                    <p>+91 123 456 789</p>
+                                </li>
+                                <li><i class="flaticon-envelope"></i>
+                                    <p>sportbazaar@support.com</p>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled card-block card-info-block">
+                                <li>
+                                    <a href="#"><img src="images/logo11.jpg" alt="" class="img-fluid"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo1.jpg" alt="" class="img-fluid"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo3.jpg" alt="" class="img-fluid"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo4.jpg" alt="" class="img-fluid"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/logo5.jpg" alt="" class="img-fluid"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                        <div class="f-links">
+                            <div class="footer-head">
+                                <h3>my account</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Order History</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-xs-12">
+                        <div class="f-links">
+                            <div class="footer-head">
+                                <h3>support</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Shipping Policy</a></li>
+                                    <li><a href="#">Return Policy</a></li>
+                                    <li><a href="#">Our Partner</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Shipping Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
+                        <div class="f-links">
+                            <div class="footer-head">
+                                <h3>our services</h3>
+                            </div>
+                            <div class="footer-content">
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Sports 365</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Management Team</a></li>
+                                    <li><a href="#">Media</a></li>
+                                    <li><a href="#">Work with Us</a></li>
+                                    <li><a href="#">Sell Through Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 ">
+                        <div class="flickr">
+                            <div class="footer-head">
+                                <h3>instagram</h3>
+                            </div>
+                            <div class="footer-content footer-effect">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#"><img src="images/layer-54.jpg" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/layer-55.jpg" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/layer-56.jpg" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/layer-57.jpg" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/layer-58.jpg" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/layer-59.jpg" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/layer-60.jpg" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/layer-61.jpg" alt="" class="img-fluid"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="images/layer-62.jpg" alt="" class="img-fluid"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer-->
+
+        <div class="copy-right">
+            <div class="container">
+                <p><a href="#">Copyright 2021 MatchUp All right Reserved</a></p>
+                <ul class="social-nav">
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <span id="go_to_top" class="go-to-top ">
+            <i class="flaticon-upload"></i>
+        </span>
+        <!-- go_to_top -->
+
+        <!-- #wrapper -->
+
+        <!-- include jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- easing -->
+        <script src="js/jquery.easing.min.js"></script>
+        <!-- bootstrap -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!--isotop-->
+        <script src="js/isotope.pkgd.min.js"></script>
+        <!--mixit up-->
+        <script src="js/jquery.mixitup.js"></script>
+        <!--nice select-->
+        <script src="js/jquery.nice-select.js"></script>
+        <!-- slick -->
+        <script src="js/slick.min.js"></script>
+        <!--parallax-->
+        <script src="js/parallax.min.js"></script>
+        <!-- jarallax -->
+        <script src="js/ofi.min.js"></script>
+        <script src="js/jarallax.js"></script>
+        <!-- Event -->
+        <script src="js/Event.js"></script>
+        <!-- Magnifier -->
+        <script src="js/Magnifier.js"></script>
+        <!--google map-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBP1lPhUhDU6MINpruPDinAzXffRlpzzFo"></script>
+        <!-- custom js -->
+        <script src="js/custom.js"></script>
+        {% endblock %}
+</body>
+
+{% endblock %}
+<!-- Mirrored from rewebsotech.com/templates/sport_bazaar/web/blog_single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 09 Apr 2021 16:43:35 GMT -->
+</html>

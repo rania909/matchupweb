@@ -1,0 +1,37 @@
+{#  {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }} #}
+{{form_start(form) }}
+
+<div  >
+
+    <div class="form-group">
+        {{ form_label(form.adresse, "adresse") }}
+
+    </div>
+
+    <div class="form-group">
+        <input {{ form_widget(form.adresse, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6 '}}) }}
+    </div>
+
+    <div class="form-group">
+        {{ form_label(form.nbdeplace, "nbdeplace") }}
+
+    </div>
+    <div class="form-group">
+        {{ form_widget(form.nbdeplace, {'attr':{'class':'form-control col-12 col-md-6 col-lg-6'}}) }}
+    </div>
+
+                <div>
+                    <button class="btn btn-success">{{ button_label|default('Ajouter') }}</button>
+                </div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+{{ form_end(form) }}

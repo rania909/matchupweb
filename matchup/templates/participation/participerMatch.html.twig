@@ -1,0 +1,27 @@
+{% extends 'base2.html.twig' %}
+
+
+    {% block main %}
+    <h2 class="section-heading">{{ match.idMatch }}</h2>
+    <b>Type: <b> {{ match.type }} <br>
+
+            <b>Date: <b> {{ match.date ? match.date|date('Y-m-d') : '' }} <br>
+
+                    <b>Nombre de joueurs: <b> {{ match.nbjoueurs }} <br>
+
+
+
+                            <h4>{{full}}</h4>
+
+                            {% if full %}
+                                <h3 class="warn">Full</h3>
+                            {% elseif participated %}
+                                <h3>Participated</h3>
+                            {% else %}
+                                <a class="btn btn-primary" href="{{path ('matchparticipation', {id: match.idMatch})}}">Participer</a>
+                            {% endif %}
+
+                            {# {% for match in matchs %}
+    match.idMatch <br>
+  {% endfor %} #}
+{% endblock %}

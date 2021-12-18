@@ -1,0 +1,43 @@
+{% extends 'base3.html.twig' %}
+{% block title %}Match{% endblock %}
+
+{% block main %}
+
+    <div class="main-content" >
+        <section class="section">
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                            </div>
+                            <div class="card-body">
+
+                                <div class="section-title mt-0">Type</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ match.type }}">
+                                </div>
+                                <div class="section-title mt-0">Date</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ match.date ? match.date|date('Y-m-d') : '' }}">
+                                </div>
+                                <div class="section-title mt-0">Nombre de joueurs</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ match.nbjoueurs }}">
+                                </div>
+
+                                <a href="{{ path('matchs_index') }}"class="badge badge-info">Retour à la liste</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+{% endblock %}

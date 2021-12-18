@@ -1,0 +1,101 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Produit Front{% endblock %}
+
+ {% block section1 %}
+
+     <section class="best-sell b1 home8">
+         {#  --le bloc blanc#}
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-9  order-lg-2 list_grid_view">
+                     <div class="inner-block-a1 a2 block-a1">
+                         <div class="best-info bestsell-block">
+                             <div class="controls">
+
+                                 <div class="S-cate">
+                                     <label>Trier :</label>
+                                     <div class="nice-select-wrapper">
+                                         <select id="SortSelect" class="nice_select">
+                                             <option value="myorder:asc">.</option>
+                                             <option value="myorder:desc">Desc</option>
+                                         </select>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="best-grid">
+                                 <div class="best_grid_block"><a href="#" class="grid-btn active"><i class="flaticon-menu"></i></a>
+                                     <a href="#" class="list-btn"><i class="flaticon-menu-1"></i></a>
+                                 </div>
+
+                             </div>
+
+                         </div>
+                     </div>
+                     <div class="clearfix"></div>
+                     <div class="row">
+                         <div id="Container" class="custom-container">
+                             <div class="mix category-1">
+                                 {% for match in matchs %}
+                                     <div class="block-stl1 grid-block  grid-info-block">
+                                         <div class="img-holder">
+                                             <div class="img-holder">
+                                                 <a href="{{ path('matchdetails' , {id: match.idMatch}) }}"  >  <img src="/images/pro-1/" alt="" class="img-fluid"></a>
+
+                                             </div>
+                                         </div>
+                                         <div class="text-block">
+                                             <div class="btn-sec">
+                                                 <div class="btn-sec-a">
+                                                     <a href="product_single.html"><i class="flaticon-eye"></i></a>
+                                                     <a href="product_single_2.html" class="btn1 btn2">BUY NOW</a>
+                                                     <a href="#"><i class="flaticon-like"></i></a>
+                                                 </div>
+                                             </div>
+
+                                         </div>
+                                     </div>
+
+                                 {% endfor %}
+
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+
+
+                 <div class="col-lg-3  order-lg-1">
+                     <div class="categories">
+                         <div class="select-categories">
+                             <h2>Type</h2>
+                         </div>
+                         <div class="boxes">
+                             <input type="checkbox" id="box-1">
+                             <label for="box-1">Football</label>
+
+                             <input type="checkbox" id="box-2" checked>
+                             <label for="box-2">BasketBall</label>
+
+                             <input type="checkbox" id="box-3">
+                             <label for="box-3">Handball </label>
+
+                             <input type="checkbox" id="box-4">
+                             <label for="box-4">Volleyball</label>
+
+                             <input type="checkbox" id="box-5">
+                             <label for="box-5">Tennis </label>
+
+
+                         </div>
+                     </div>
+
+                     <!--brand-->
+
+                 </div>
+             </div>
+         </div>
+     </section>
+
+
+ {% endblock %}
+

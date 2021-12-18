@@ -1,0 +1,35 @@
+{% extends 'base3.html.twig' %}
+{% block main %}
+    <canvas id="myChart" width="20" height="20"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: {{  endroit|raw }},
+                datasets: [{
+                    label: 'nombre de terrains par emplacement:',
+                    data: {{  count|raw }},
+                    backgroundColor: [
+
+
+                    ],
+                    borderColor: [
+
+                    ],
+                    borderWidth: 0.1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+{% endblock %}

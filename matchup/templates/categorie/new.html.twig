@@ -1,0 +1,32 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}New Categorie{% endblock %}
+{% block main %}
+
+    <div class="main-content">
+        <section class="section">
+            <div class="section-body">
+
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Ajouter une nouvelle catégorie</h4>
+                        </div>
+                        <div class="card-body">
+                            {{ include('categorie/_form.html.twig') }}
+                        </div>
+                        <a href="{{ path('categorie_index') }}"class="badge badge-info">retour</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+    </div>
+
+
+
+{% endblock %}
+

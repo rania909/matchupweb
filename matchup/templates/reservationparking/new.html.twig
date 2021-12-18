@@ -1,0 +1,46 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}New Reservationparking{% endblock %}
+
+{% block main %}
+
+    <div class="main-content">
+        <section class="section">
+            <div class="section-body">
+
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Create new Reservationparking</h4>
+                        </div>
+                        <div class="card-body">
+
+
+                            {{ include('reservationparking/_form.html.twig') }}
+
+
+                        </div>
+                        <a href="{{ path('reservationparking_index') }}"class="badge badge-info">Retour</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+    </div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

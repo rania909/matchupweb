@@ -1,0 +1,135 @@
+{% extends 'base3.html.twig' %}
+{% block title %}Tournoi {% endblock %}
+
+     {% block main %}
+
+         <div class="main-content">
+             <section class="section">
+
+
+
+                 <div class="row">
+                     <div class="col-12">
+                         <div class="card">
+                             <div class="card-header">
+                                 <h4>Liste des Tournois</h4>
+                                 <div class="card-header-form">
+                                     <form class="navbar-form" method="post"action="{{ path('affichertournoi') }}">
+                                        {# {{ form_start(searchForm) }}#}
+                                         <div class="input-group">
+                                             {#  {{ form_widget(searchForm.nomTournoi) }}#}
+                                             <table>
+                                             <div class="input-group-btn">
+                                                 <form>
+                                                 <div class="input-group no-border">
+
+
+
+
+
+
+                                                     <button class="btn btn-default btn-round btn-just-icon">
+                                                         {{ button_label|default('Trier') }}
+                                                     </button>
+
+
+                                                 </div>
+
+                                                 </form>
+                                                 {#  {{ form_end(searchForm) }}#}
+                                                     <tr>
+
+                                                         <td><input type="text" id="search" class="form-control" placeholder="Rechercher"></td>
+                                                         <td><i class="fas fa-search"></i></td>
+                                                 <a href="{{ path('tournoi_new') }}"class="badge badge-primary">Ajouter</a>
+
+                                                     </tr>
+                                             </div>
+                                             </table>
+                                          </div>
+                                     </form>
+                                 </div>
+                             </div>
+                             <div class="card-body p-0">
+                                 <div class="table-responsive">
+                                     <script src="{{ asset('jquery.min.js') }}"></script>
+                                     <table id="tableac" class="table">
+                                         <tr>
+
+                                             <th>Nom Tournoi</th>
+                                             <th>Type</th>
+                                             <th>Action </th>
+                                         </tr>
+                                         </thead>
+                                         <tbody>
+                                         {% for tournoi in tournois %}
+                                             <tr>
+
+                                                 <td>{{ tournoi.nomTournoi }}</td>
+                                                 <td>{{ tournoi.type }}</td>
+
+                                                 <td>
+                                                     <a href="{{ path('tournoi_show', {'idTournoi': tournoi.idTournoi}) }}">Afficher</a>
+
+                                                 </td>
+                                             </tr>
+                                         {% else %}
+                                             <tr>
+                                                 <td colspan="11">Aucun enregistrement trouvé</td>
+                                             </tr>
+                                         {% endfor %}
+                                         <script>
+                                             $(document).ready(function(){
+                                                 $('#search').keyup(function(){
+                                                     search_table($(this).val());
+                                                 });
+                                                 function search_table(value){
+                                                     $('#tableac tbody tr').each(function(){
+                                                         var found = 'false';
+                                                         $(this).each(function(){
+                                                             if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                                             {
+                                                                 found = 'true';
+                                                             }
+                                                         });
+                                                         if(found == 'true')
+                                                         {
+                                                             $(this).show();
+
+                                                         }
+                                                         else
+                                                         {
+                                                             $(this).hide();
+
+                                                         }
+                                                     });
+                                                 }
+                                             });
+                                         </script>
+                                         </tbody>
+
+                                         <a class="navigation"> {{ knp_pagination_render(tournois) }}</a>
+
+                                     </table>
+
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="card-body">
+
+
+
+
+                             <a class="btn btn-primary" href="{{path('tournoi_liste')}}"> PDF </a>
+                         </div>
+
+                     </div>
+
+                 </div>
+
+
+             </section>
+
+         </div>
+
+     {% endblock %}

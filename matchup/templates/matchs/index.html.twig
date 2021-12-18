@@ -1,0 +1,127 @@
+{% extends 'base3.html.twig' %}
+{% block title %}Match{% endblock %}
+
+{% block main %}
+
+
+<div class="main-content">
+    <section class="section">
+
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Liste des Matchs</h4>
+                        <div class="card-header-form">
+                            <form>
+                                <div class="input-group">
+                                    <table>
+                                        <div class="input-group-btn">
+
+                                            {# <button class="btn btn-primary"><i class="fas fa-search"></i></button> #}
+                                            <tr>
+
+                                                <td><input type="text" id="search" class="form-control" placeholder="Rechercher"></td>
+
+                                                <td><i class="fas fa-search"></i></td>
+                                                <a href="{{ path('matchs_new') }}"class="badge badge-primary">Ajouter</a>
+                                            </tr>
+                                        </div>
+                                    </table>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <script src="{{ asset('jquery.min.js') }}"></script>
+                            <table id="tableac" class="table">
+                                <tr>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Nombre de joueurs</th>
+
+                <th>Action </th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for match in matchs %}
+            <tr>
+
+                <td>{{ match.type }}</td>
+                <td>{{ match.date ? match.date|date('Y-m-d') : '' }}</td>
+                <td>{{ match.nbjoueurs }}</td>
+
+                <td>
+                    <a href="{{ path('matchs_show', {'idMatch': match.idMatch}) }}">Afficher</a>
+
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">Aucun enregistrement trouvé</td>
+            </tr>
+        {% endfor %}
+
+        <script>
+            $(document).ready(function(){
+                $('#search').keyup(function(){
+                    search_table($(this).val());
+                });
+                function search_table(value){
+                    $('#tableac tbody tr').each(function(){
+                        var found = 'false';
+                        $(this).each(function(){
+                            if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                            {
+                                found = 'true';
+                            }
+                        });
+                        if(found == 'true')
+                        {
+                            $(this).show();
+
+                        }
+                        else
+                        {
+                            $(this).hide();
+
+                        }
+                    });
+                }
+            });
+        </script>
+
+        </tbody>
+                                {{ knp_pagination_render(matchs) }}
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+
+
+
+
+                    <a class="btn btn-primary" href="{{path('contact')}}"> Envoyer Email </a>
+                    <a class="btn btn-primary" href=" {{path('main')}}"> Calendrier </a>
+                    <a class="btn btn-primary" href=" {{path('participation')}}"> Participer </a>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+</div>
+
+     {% endblock %}

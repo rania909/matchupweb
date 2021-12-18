@@ -1,0 +1,115 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block main %}
+
+    <div class="main-content" >
+        <section class="section">
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>User</h4>
+                            </div>
+                            <div class="card-body">
+
+
+                                <div class="section-title mt-0">Nom</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ app.user.nom }}">
+                                </div>
+                                <div class="section-title mt-0">Prenom</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ app.user.prenom }}">
+                                </div>
+                                <div class="section-title mt-0">Email</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ app.user.email }}">
+                                </div>
+                                <div class="section-title mt-0">Mdp</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ app.user.mdp }}">
+                                </div>
+                                <div class="section-title mt-0">Adresse</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ app.user.adresse }}">
+                                </div>
+                                <div class="section-title mt-0">Age</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ app.user.age }}">
+                                </div>
+                                <div class="section-title mt-0">Genre</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ app.user.genre }}">
+                                </div>
+                                <div class="section-title mt-0">NbTerrain</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ app.user.nbTerrain }}">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <select id='voiceList' hidden>
+
+                            </select> <br><br>
+
+
+                            <button id='btnSpeak' class="badge badge-info">Clik</button>
+
+                            <script>
+
+                                var voiceList = document.querySelector('#voiceList');
+                                var btnSpeak = document.querySelector('#btnSpeak');
+                                var synth = window.speechSynthesis;
+                                var voices = [];
+
+                                PopulateVoices();
+                                if(speechSynthesis !== undefined){
+                                    speechSynthesis.onvoiceschanged = PopulateVoices;
+                                }
+
+                                btnSpeak.addEventListener('click', ()=> {
+                                    var txtInput= ("bienvenue {{ app.user.prenom }} {{ app.user.nom }} cher match up");
+                                    var toSpeak = new SpeechSynthesisUtterance(txtInput);
+                                    var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                                    voices.forEach((voice)=>{
+                                        if(voice.name === selectedVoiceName){
+                                            toSpeak.voice = voice;
+                                        }
+                                    });
+                                    synth.speak(toSpeak);
+                                });
+
+                                function PopulateVoices(){
+                                    voices = synth.getVoices();
+                                    var selectedIndex = voiceList.selectedIndex < 0 ? 6 : voiceList.selectedIndex;
+                                    voiceList.innerHTML = '';
+                                    voices.forEach((voice)=>{
+                                        var listItem = document.createElement('option');
+                                        listItem.textContent = voice.name;
+                                        listItem.setAttribute('data-lang', voice.lang);
+                                        listItem.setAttribute('data-name', voice.name);
+                                        voiceList.appendChild(listItem);
+                                    });
+
+                                    voiceList.selectedIndex = selectedIndex;
+                                }
+                            </script>
+        </section>
+    </div>
+
+{% endblock %}

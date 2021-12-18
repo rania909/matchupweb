@@ -1,0 +1,56 @@
+{% extends 'base3.html.twig' %}
+
+{% block title %}Reservationparking{% endblock %}
+
+{% block main %}
+
+    <div class="main-content" >
+        <section class="section">
+            <div class="section-body">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Reservationparking</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="section-title mt-0">Idrsvparking</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ reservationparking.idrsvparking}}">
+                                </div>
+                                <div class="section-title mt-0">DateD</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ reservationparking.dateD  |date('d-m-Y')  }}">
+                                </div>
+                                <div class="section-title mt-0">DateF</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ reservationparking.dateF  |date('d-m-Y')  }}">
+                                </div>
+                                <div class="section-title mt-0">Email</div>
+                                <div class="form-group">
+
+                                    <input type="text" class="form-control" value="{{ reservationparking.email }}">
+                                </div>
+
+                                <a href="{{ path('reservationparking_index') }}"class="badge badge-info">retour</a>
+
+                                <a href="{{ path('reservationparking_edit', {'idrsvparking': reservationparking.idrsvparking}) }}"class="badge badge-warning">Editer</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+{% endblock %}
+
+
+
+
+
